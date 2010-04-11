@@ -1,4 +1,5 @@
 // Simply runs a command passed by the Actions.xml
+// This is mainly a proof of concept and for testing purposes
 
 var utils = require('webos_utils');
 

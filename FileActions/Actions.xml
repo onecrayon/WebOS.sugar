@@ -7,4 +7,12 @@
 			<script>generate_app</script>
 		</setup>
 	</action>
+	
+	<action id="com.onecrayon.WebOS.PackageInstall" category="actions.webos">
+		<class>Spice</class>
+		<title>Package and Install App</title>
+		<setup>
+			<script>package_install</script>
+		</setup>
+	</action>
 </action-recipes>
