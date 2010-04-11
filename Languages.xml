@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<settings>
+	<meta>
+		<name>WebOS.sugar</name>
+		<description>Actions and snippets for working with WebOS applications</description>
+		<author>Ian Beck</author>
+		<identifier>com.onecrayon.Sugar.WebOS</identifier>
+		<version status="release">1.0</version>
+		<download format="git">git://github.com/onecrayon/WebOS.sugar.git</download>
+	</meta>
+</settings>
