@@ -1,6 +1,6 @@
 // Generates a new application in the current project folder
 
-var utils = require('webos-utils');
+var utils = require('webos_utils');
 
 exports.main = function() {
 	var root = '';
