@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<action-recipes>
+	<action id="com.onecrayon.WebOS.NewApp" category="actions.webos">
+		<class>Spice</class>
+		<title>New WebOS App</title>
+		<setup>
+			<script>generate_app</script>
+		</setup>
+	</action>
+</action-recipes>
