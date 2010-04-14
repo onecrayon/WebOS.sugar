@@ -3,4 +3,5 @@
     <category id="actions.webos" show="sub">
         <title>WebOS</title>
     </category>
+    <category id="webos.emulator-actions" show="inline separated"></category>
 </action-categories> 
