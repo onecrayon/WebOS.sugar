@@ -15,9 +15,7 @@ exports.main = function(cmdPrefix) {
 	}
 	
 	// Grab the contents of the appinfo.json file, and parse it from JSON
-	var appInfoFile = root.stringByAppendingPathComponent_('appinfo.json');
-	var appInfo = JSON.decode(String(SpiceController.read_(appInfoFile)));
-	var projectID = appInfo.id;
+	var projectID = utils.getAppID(root);
 	
 	// Find the workspace folder
 	var sharedFolder = root.substring(0, root.lastIndexOf('/')).replace(/ /, '\\ ');

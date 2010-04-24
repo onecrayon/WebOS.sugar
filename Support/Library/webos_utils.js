@@ -56,11 +56,20 @@ var checkForAppInfo = function(path) {
 	}
 }
 
+var getAppID = function(root) {
+	// Grab the contents of the appinfo.json file, and parse it from JSON
+	var appInfoFile = root.stringByAppendingPathComponent_('appinfo.json');
+	var appInfo = JSON.decode(String(SpiceController.read_(appInfoFile)));
+	return appInfo.id;
+}
+
 exports.prepCommand = prepCommand;
 
 exports.toUnixPath = toUnixPath;
 exports.commonFolder = commonFolder;
+exports.rootFolder = rootFolder;
 
 exports.getShellVar = getShellVar;
 
 exports.checkForAppInfo = checkForAppInfo;
+exports.getAppID = getAppID;

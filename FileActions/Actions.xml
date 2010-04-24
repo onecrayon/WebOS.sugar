@@ -23,26 +23,13 @@
 	
 	<action id="com.onecrayon.WebOS.PackageInstall" category="actions.webos/webos.emulator-actions/1">
 		<class>Spice</class>
-		<title>Package and Install App</title>
+		<title>Install and Launch App</title>
 		<setup>
 			<script>package_install</script>
 		</setup>
 	</action>
 	
-	<action id="com.onecrayon.WebOS.LaunchApp" category="actions.webos/webos.emulator-actions/2">
-		<class>Spice</class>
-		<title>Launch App</title>
-		<setup>
-			<script>work_with_app</script>
-			<arguments>
-				<array>
-					<string>palm-launch</string>
-				</array>
-			</arguments>
-		</setup>
-	</action>
-	
-	<action id="com.onecrayon.WebOS.CloseApp" category="actions.webos/webos.emulator-actions/3">
+	<action id="com.onecrayon.WebOS.CloseApp" category="actions.webos/webos.emulator-actions/2">
 		<class>Spice</class>
 		<title>Close App</title>
 		<setup>
@@ -55,7 +42,7 @@
 		</setup>
 	</action>
 	
-	<action id="com.onecrayon.WebOS.DeleteApp" category="actions.webos/webos.emulator-actions/4">
+	<action id="com.onecrayon.WebOS.DeleteApp" category="actions.webos/webos.emulator-actions/3">
 		<class>Spice</class>
 		<title>Delete App</title>
 		<setup>

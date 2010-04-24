@@ -17,8 +17,10 @@ exports.main = function() {
 	var projectFolder = root.substr(root.lastIndexOf('/') + 1)
 	// And grab the folder above that so we can CD there (can't pass full path to palm-package, sadly)
 	var sharedFolder = root.substring(0, root.lastIndexOf('/')).replace(/ /, '\\ ');
+	// Grab the app ID to launch the app
+	var projectID = utils.getAppID(root);
 	// Run the package command
-	var command = utils.prepCommand('cd ' + sharedFolder + '; palm-package ' + projectFolder);
+	var command = utils.prepCommand('cd ' + sharedFolder + '; palm-package --exclude="*.esproj" ' + projectFolder);
 	var result = system.shell(command);
 	// Check to make sure the result is what we want
 	if (result.indexOf('creating package') < 0) {
@@ -33,6 +35,9 @@ exports.main = function() {
 	command = utils.prepCommand('cd ' + sharedFolder + '; palm-install ' + ipkFile);
 	result = system.shell(command);
 	// Log the result
+	system.log(result);
+	command = utils.prepCommand('palm-launch -i ' + projectID);
+	result = system.shell(command);
 	system.log(result);
 	return true;
 };
