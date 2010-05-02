@@ -4,14 +4,9 @@ var utils = require('webos_utils');
 
 exports.main = function(cmdPrefix) {
 	// Find our root folder
-	// TODO: DUPLICATE CODE WITH package_install.js, MOVE TO UTILS?
-	var root = NSString.stringWithString_(utils.commonFolder());
-	if (!utils.checkForAppInfo(root)) {
-		root = NSString.stringWithString_(utils.rootFolder());
-		if (!utils.checkForAppInfo(root)) {
-			system.log('WebOS.sugar error: could not find root of project. Please select the root folder and try again.');
-			return false;
-		}
+	var root = utils.commonOrRootFolder();
+	if (root === false) {
+		return false;
 	}
 	
 	// Grab the contents of the appinfo.json file, and parse it from JSON

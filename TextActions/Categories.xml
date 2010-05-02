@@ -3,5 +3,7 @@
 	<category id="actions.webos" show="sub">
 		<title>WebOS</title>
 	</category>
-	<category id="snippets.webos.logging" show="inline separated"></category>
+	<category id="snippets.webos.logging" show="sub">
+		<title>Logging</title>
+	</category>
 </action-categories>

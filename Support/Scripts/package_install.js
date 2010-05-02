@@ -4,13 +4,9 @@ require.global('mootools-server');
 var utils = require('webos_utils');
 
 exports.main = function() {
-	var root = NSString.stringWithString_(utils.commonFolder());
-	if (!utils.checkForAppInfo(root)) {
-		root = NSString.stringWithString_(utils.rootFolder());
-		if (!utils.checkForAppInfo(root)) {
-			system.log('WebOS.sugar error: could not find root of project to package and install. Please select the root folder and try again.');
-			return false;
-		}
+	var root = utils.commonOrRootFolder();
+	if (root === false) {
+		return false;
 	}
 	
 	// If we got here, we have the root folder, so grab its name (final segment)

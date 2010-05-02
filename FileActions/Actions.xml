@@ -41,6 +41,15 @@
 		</setup>
 	</action>
 	
+	<action id="com.onecrayon.WebOS.FollowLog" category="actions.webos/webos.emulator-actions/3">
+		<class>Spice</class>
+		<title>View Log in Terminal</title>
+		<key-equivalent>control shift l</key-equivalent>
+		<setup>
+			<script>terminal_log</script>
+		</setup>
+	</action>
+	
 	<action id="com.onecrayon.WebOS.PackageInstall" category="actions.webos/webos.app-actions/0">
 		<class>Spice</class>
 		<title>Install and Run App</title>
@@ -92,7 +101,7 @@
 		</setup>
 	</action>
 	
-	<action id="com.onecrayon.WebOS.NewApp" category="actions.webos/actions.rare">
+	<action id="com.onecrayon.WebOS.NewApp" category="actions.webos/actions.rare/0">
 		<class>Spice</class>
 		<title>New WebOS App</title>
 		<setup>
