@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<action-sort-instructions>
+	<sort-template>
+		<selector>actions.webos</selector>
+		<selector>webos.emulator-actions</selector>
+		<selector>webos.app-actions</selector>
+		<selector>actions.rare</selector>
+	</sort-template>
+</action-sort-instructions>

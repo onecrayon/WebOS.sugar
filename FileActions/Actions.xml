@@ -1,37 +1,73 @@
 <?xml version="1.0"?>
 <action-recipes>
-	<action id="com.onecrayon.WebOS.NewApp" category="actions.webos">
-		<class>Spice</class>
-		<title>New WebOS App</title>
-		<setup>
-			<script>generate_app</script>
-		</setup>
-	</action>
-	
 	<action id="com.onecrayon.WebOS.LaunchEmulator" category="actions.webos/webos.emulator-actions/0">
 		<class>Spice</class>
 		<title>Launch Emulator</title>
+		<key-equivalent>control shift m</key-equivalent>
 		<setup>
 			<script>exec_command</script>
 			<arguments>
 				<array>
-					<string>open /Applications/Palm\ Emulator.app</string>
+					<string>osascript -e 'tell application "Palm Emulator" to quit'; open -a "Palm Emulator";</string>
 				</array>
 			</arguments>
 		</setup>
 	</action>
 	
-	<action id="com.onecrayon.WebOS.PackageInstall" category="actions.webos/webos.emulator-actions/1">
+	<action id="com.onecrayon.WebOS.LaunchInspector" category="actions.webos/webos.emulator-actions/1">
 		<class>Spice</class>
-		<title>Install and Launch App</title>
+		<title>Launch Inspector</title>
+		<key-equivalent>control n</key-equivalent>
+		<setup>
+			<script>exec_command</script>
+			<arguments>
+				<array>
+					<string>osascript -e 'tell application "Palm Inspector" to quit'; open -a "Palm Inspector";</string>
+				</array>
+			</arguments>
+		</setup>
+	</action>
+	
+	<action id="com.onecrayon.WebOS.LaunchResourceMonitor" category="actions.webos/webos.emulator-actions/2">
+		<class>Spice</class>
+		<title>Launch Resource Monitor</title>
+		<setup>
+			<script>work_with_app</script>
+			<arguments>
+				<array>
+					<string>palm-worm</string>
+				</array>
+			</arguments>
+		</setup>
+	</action>
+	
+	<action id="com.onecrayon.WebOS.PackageInstall" category="actions.webos/webos.app-actions/0">
+		<class>Spice</class>
+		<title>Install and Run App</title>
+		<key-equivalent>control r</key-equivalent>
 		<setup>
 			<script>package_install</script>
 		</setup>
 	</action>
 	
-	<action id="com.onecrayon.WebOS.CloseApp" category="actions.webos/webos.emulator-actions/2">
+	<action id="com.onecrayon.WebOS.RunApp" category="actions.webos/webos.app-actions/1">
+		<class>Spice</class>
+		<title>Run App</title>
+		<key-equivalent>control shift r</key-equivalent>
+		<setup>
+			<script>work_with_app</script>
+			<arguments>
+				<array>
+					<string>palm-launch -i</string>
+				</array>
+			</arguments>
+		</setup>
+	</action>
+	
+	<action id="com.onecrayon.WebOS.CloseApp" category="actions.webos/webos.app-actions/2">
 		<class>Spice</class>
 		<title>Close App</title>
+		<key-equivalent>control x</key-equivalent>
 		<setup>
 			<script>work_with_app</script>
 			<arguments>
@@ -42,9 +78,10 @@
 		</setup>
 	</action>
 	
-	<action id="com.onecrayon.WebOS.DeleteApp" category="actions.webos/webos.emulator-actions/3">
+	<action id="com.onecrayon.WebOS.DeleteApp" category="actions.webos/webos.app-actions/3">
 		<class>Spice</class>
 		<title>Delete App</title>
+		<key-equivalent>command control shift x</key-equivalent>
 		<setup>
 			<script>work_with_app</script>
 			<arguments>
@@ -52,6 +89,14 @@
 					<string>palm-install -r</string>
 				</array>
 			</arguments>
+		</setup>
+	</action>
+	
+	<action id="com.onecrayon.WebOS.NewApp" category="actions.webos/actions.rare">
+		<class>Spice</class>
+		<title>New WebOS App</title>
+		<setup>
+			<script>generate_app</script>
 		</setup>
 	</action>
 </action-recipes>

@@ -1,7 +1,9 @@
 <?xml version="1.0"?>
 <action-categories>
-    <category id="actions.webos" show="sub">
-        <title>WebOS</title>
-    </category>
-    <category id="webos.emulator-actions" show="inline separated"></category>
-</action-categories> 
+	<category id="actions.webos" show="sub">
+		<title>WebOS</title>
+	</category>
+	<category id="actions.rare" show="inline separated"></category>
+	<category id="webos.emulator-actions" show="inline separated"></category>
+	<category id="webos.app-actions" show="inline separated"></category>
+</action-categories>
