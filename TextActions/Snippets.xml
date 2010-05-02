@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<action-recipes>
+
+	<snippet id="com.onecrayon.Snippets.WebOS.MojoLog" category="actions.webos/actions.snippets/snippets.webos.logging/0">
+		<title>Mojo.Log</title>
+		<text><![CDATA[Mojo.Log.${1:info}($2);$0]]></text>
+		<text-trigger>m.l</text-trigger>
+		<syntax-context>sourcecode.js</syntax-context>
+	</snippet>
+	
+	<snippet id="com.onecrayon.Snippets.WebOS.MojoLogJSON" category="actions.webos/actions.snippets/snippets.webos.logging/1">
+		<title>Mojo.Log (JSON)</title>
+		<text><![CDATA[Mojo.Log.${1:info}("%j", ${2:targetObject});$0]]></text>
+		<text-trigger>m.lj</text-trigger>
+		<syntax-context>sourcecode.js</syntax-context>
+	</snippet>
+	
+	<snippet id="com.onecrayon.Snippets.WebOS.MojoLogProperties" category="actions.webos/actions.snippets/snippets.webos.logging/2">
+		<title>Mojo.Log (Properties)</title>
+		<text><![CDATA[Mojo.Log.logProperties(${1:targetObject}, "{$2:Object Name}"${3:, $4{includePrototype(true|false)}});$0]]></text>
+		<text-trigger>m.lp</text-trigger>
+		<syntax-context>sourcecode.js</syntax-context>
+	</snippet>
+	
+	<snippet id="com.onecrayon.Snippets.WebOS.MojoLogPropertiesAsString" category="actions.webos/actions.snippets/snippets.webos.logging/3">
+		<title>Mojo.Log (Properties As String)</title>
+		<text><![CDATA[Mojo.Log.propertiesAsString(${1:targetObject}${2:, ${3:includePrototype(true|false)}});$0]]></text>
+		<text-trigger>m.lps</text-trigger>
+		<syntax-context>sourcecode.js</syntax-context>
+	</snippet>
+	
+	<snippet id="com.onecrayon.Snippets.WebOS.MojoLogException" category="actions.webos/actions.snippets/snippets.webos.logging/4">
+		<title>Mojo.Log (Exception)</title>
+		<text><![CDATA[Mojo.Log.logException(${1:e}$2{, ${3:message}});$0]]></text>
+		<text-trigger>m.le</text-trigger>
+		<syntax-context>sourcecode.js</syntax-context>
+	</snippet>
+	
+</action-recipes>

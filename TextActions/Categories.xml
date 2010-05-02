@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<action-categories>
+	<category id="actions.webos" show="sub">
+		<title>WebOS</title>
+	</category>
+	<category id="snippets.webos.logging" show="inline separated"></category>
+</action-categories>
