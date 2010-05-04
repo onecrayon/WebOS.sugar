@@ -3,6 +3,7 @@
 	<sort-template>
 		<selector>actions.webos</selector>
 		<selector>webos.emulator-actions</selector>
+		<selector>webos.terminal-actions</selector>
 		<selector>webos.app-actions</selector>
 		<selector>actions.rare</selector>
 	</sort-template>

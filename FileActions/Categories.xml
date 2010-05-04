@@ -5,5 +5,6 @@
 	</category>
 	<category id="actions.rare" show="inline separated"></category>
 	<category id="webos.emulator-actions" show="inline separated"></category>
+	<category id="webos.terminal-actions" show="inline separated"></category>
 	<category id="webos.app-actions" show="inline separated"></category>
 </action-categories>

@@ -25,8 +25,13 @@ for the Inspector.
 **Launch Resource Manager** will run palm-worm for your app.
 It will not relaunch it, so you'll have to close it down yourself.
 
-**Follow Log In Terminal** will open up a new Terminal window
+**View Log In Terminal** will open up a new Terminal window
 and subscribe you to your app's debugging log.
+
+**SSH Into Emulator** will open up an SSH session to the emulator
+in Terminal.
+
+**Novaterm Into Device** will launch Novaterm in Terminal.
 
 **Install and Run App** will package, install, and launch your
 app in the first device it finds. This is probably the action

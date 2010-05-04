@@ -41,12 +41,40 @@
 		</setup>
 	</action>
 	
-	<action id="com.onecrayon.WebOS.FollowLog" category="actions.webos/webos.emulator-actions/3">
+	<action id="com.onecrayon.WebOS.FollowLog" category="actions.webos/webos.terminal-actions/0">
 		<class>Spice</class>
 		<title>View Log in Terminal</title>
 		<key-equivalent>control shift l</key-equivalent>
 		<setup>
 			<script>terminal_log</script>
+		</setup>
+	</action>
+	
+	<action id="com.onecrayon.WebOS.SSHEmulator" category="actions.webos/webos.terminal-actions/1">
+		<class>Spice</class>
+		<title>SSH Into Emulator</title>
+		<key-equivalent>control shift s</key-equivalent>
+		<setup>
+			<script>terminal_command</script>
+			<arguments>
+				<array>
+					<string>echo "Password is blank, just hit enter"; ssh -p 5522 -L 5581:localhost:8080 root@localhost</string>
+				</array>
+			</arguments>
+		</setup>
+	</action>
+	
+	<action id="com.onecrayon.WebOS.Novaterm" category="actions.webos/webos.terminal-actions/2">
+		<class>Spice</class>
+		<title>Novaterm Into Device</title>
+		<key-equivalent>control shift n</key-equivalent>
+		<setup>
+			<script>terminal_command</script>
+			<arguments>
+				<array>
+					<string>novaterm</string>
+				</array>
+			</arguments>
 		</setup>
 	</action>
 	
