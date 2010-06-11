@@ -1,6 +1,49 @@
 <?xml version="1.0"?>
 <action-recipes>
 
+	<snippet id="com.onecrayon.Snippets.WebOS.Assistant" category="actions.webos">
+		<title>Prototype-style Scene Assistant</title>
+		<text><![CDATA[var ${1:Myscene}Assistant = Class.create({
+	initialize: function() {
+		/*
+		This is the creator function for your scene assistant object. It will be passed all the additional parameters (after the scene name) that were passed to pushScene.
+		
+		The reference to the scene controller (this.controller) has not be established yet, so any initialization that needs the scene controller should be done in the setup function below.
+		*/
+	},
+	
+	setup: function() {
+		/*
+		This function is for setup tasks that have to happen when the scene is first created. Use Mojo.View.render to render view templates and add them to the scene, if needed.
+		*/
+		
+		/* setup widgets here */
+	},
+	
+	activate: function(event) {
+		/*
+		Put in event handlers here that should only be in effect when this scene is active. For example, key handlers that are observing the document.
+		*/
+	},
+	
+	deactivate: function(event) {
+		/*
+		Remove any event handlers you added in activate and do any other cleanup that should happen before this scene is popped or another scene is pushed on top.
+		*/
+	},
+	
+	cleanup: function() {
+		/*
+		This function should do any cleanup needed before the scene is destroyed as a result of being popped off the scene stack.
+		*/
+	}
+	
+	// Custom methods for your scene assistant go here
+	// Remember to add a comma after the cleanup function, though!
+});]]></text>
+		<syntax-context>sourcecode.js</syntax-context>
+	</snippet>
+
 	<snippet id="com.onecrayon.Snippets.WebOS.MojoLog" category="actions.webos/snippets.webos.logging/0">
 		<title>Mojo.Log</title>
 		<text><![CDATA[Mojo.Log.${1:info}($2);$0]]></text>
@@ -17,7 +60,7 @@
 	
 	<snippet id="com.onecrayon.Snippets.WebOS.MojoLogProperties" category="actions.webos/snippets.webos.logging/2">
 		<title>Mojo.Log (Properties)</title>
-		<text><![CDATA[Mojo.Log.logProperties(${1:targetObject}, "{$2:Object Name}"${3:, $4{includePrototype(true|false)}});$0]]></text>
+		<text><![CDATA[Mojo.Log.logProperties(${1:targetObject}, "${2:Object Name}"${3:, ${4:includePrototype(true|false)}});$0]]></text>
 		<text-trigger>m.lp</text-trigger>
 		<syntax-context>sourcecode.js</syntax-context>
 	</snippet>
@@ -31,7 +74,7 @@
 	
 	<snippet id="com.onecrayon.Snippets.WebOS.MojoLogException" category="actions.webos/snippets.webos.logging/4">
 		<title>Mojo.Log (Exception)</title>
-		<text><![CDATA[Mojo.Log.logException(${1:e}$2{, ${3:message}});$0]]></text>
+		<text><![CDATA[Mojo.Log.logException(${1:e}${2:, ${3:message}});$0]]></text>
 		<text-trigger>m.le</text-trigger>
 		<syntax-context>sourcecode.js</syntax-context>
 	</snippet>

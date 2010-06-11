@@ -44,7 +44,7 @@
 	<action id="com.onecrayon.WebOS.FollowLog" category="actions.webos/webos.terminal-actions/0">
 		<class>Spice</class>
 		<title>View Log in Terminal</title>
-		<key-equivalent>control shift l</key-equivalent>
+		<key-equivalent>control t</key-equivalent>
 		<setup>
 			<script>terminal_log</script>
 		</setup>
