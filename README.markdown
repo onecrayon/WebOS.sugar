@@ -18,14 +18,17 @@ so other people can benefit and contribute to it, as well.
 or greater!** Make sure you install Spice prior to using the
 WebOS.sugar or nothing but the snippets will work.
 
+Once Spice is installed, [download WebOS.sugar][dl], unzip it, and
+double click to install.
+
+If you have git installed, instead run this command and relaunch
+Espresso:
+
+    cd ~/Library/Application\ Support/Espresso/Sugars
+    git clone git://github.com/onecrayon/WebOS.sugar.git
+
    [spice]: http://onecrayon.com/spice/
-
-If you are downloading WebOS.sugar's source from GitHub, make
-sure to rename it to `WebOS.sugar` prior to installing it (by
-default GitHub will append a bunch of junk to the extension).
-
-Otherwise, just double click to install (you'll need to relaunch
-Espresso before the actions are available).
+   [dl]: http://github.com/downloads/onecrayon/WebOS.sugar/WebOS.sugar.zip
 
 ### Known problems
 
