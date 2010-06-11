@@ -1,15 +1,48 @@
 WebOS.sugar for Espresso
 ========================
 
-**EARLY DEVELOPMENT VERSION**  
-I'm still actively developing this sugar to solve common
-issues as I work with WebOS. It's pretty basic at the
-moment, but if you'd like to download and try it out feel
-free.  **You will need to download and compile the
-bleeding edge version of [Spice](http://github.com/onecrayon/Spice-sugar/)
-in order for the sugar to work.**
+The WebOS.sugar allows you to develop your WebOS apps
+in the [Espresso][espresso] text editor for Mac.
 
-### Basic Documentation
+I developed WebOS.sugar so that I could create [TouchNote][touchnote]
+in Espresso, and I'm sharing it under an MIT license
+so other people can benefit and contribute to it, as well.
+
+   [espresso]: http://macrabbit.com/espresso/
+   [touchnote]: http://onecrayon.com/touchnote/
+
+
+### Installation
+
+**Important: WebOS.sugar requires [Spice.sugar][spice] 1.0b7
+or greater!** Make sure you install Spice prior to using the
+WebOS.sugar or nothing but the snippets will work.
+
+   [spice]: http://onecrayon.com/spice/
+
+If you are downloading WebOS.sugar's source from GitHub, make
+sure to rename it to `WebOS.sugar` prior to installing it (by
+default GitHub will append a bunch of junk to the extension).
+
+Otherwise, just double click to install (you'll need to relaunch
+Espresso before the actions are available).
+
+### Known problems
+
+I've been using WebOS.sugar pretty heavily the past couple months,
+and don't know of any unfixed bugs. However, you should know:
+
+* Some actions in File&rarr;Actions&rarr;WebOS run a little slow.
+  There is no progress indicator at the moment, but you may notice
+  Espresso becoming less responsive while the action is completing.
+  This is a normal side effect of needing to run shell commands rather
+  than tying into an API.
+* If the Inspector is running, Launch Inspector doesn't always succeed
+  in relaunching it. I haven't found a workaround yet, so just be aware.
+
+Enjoy!
+
+### Documentation
 
 Most of the actions you'll want to use are located in
 File&rarr;Actions&rarr;WebOS. They are also accessible by
@@ -71,7 +104,7 @@ scene (I don't like how the WebOS Textmate bundle just uses the
 selected text, because it requires you to think ahead too much).
 
 I want to add a simple preferences area rather than rely on TEA's
-custom shell variables.
+custom shell variables for generating new apps.
 
 I'd like a better selection of snippets, and adding CodeSense for
 Mojo objects would be awesome (but maybe not practical given time
@@ -81,3 +114,25 @@ I'm also open to ideas; I think I've hit the major points of the
 command-line tools, but there's probably stuff I'm overlooking.
 [Drop me a line](http://onecrayon.com/about/contact/)
 if you have some feedback.
+
+### Released under an MIT license
+
+Copyright (c) 2010 Ian Beck
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
