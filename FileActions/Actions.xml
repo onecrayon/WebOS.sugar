@@ -6,11 +6,8 @@
 		<key-equivalent>control shift m</key-equivalent>
 		<setup>
 			<script>exec_command</script>
-			<arguments>
-				<array>
-					<string>osascript -e 'tell application "Palm Emulator" to quit'; open -a "Palm Emulator";</string>
-				</array>
-			</arguments>
+			
+			<command>osascript -e 'tell application "Palm Emulator" to quit'; open -a "Palm Emulator";</command>
 		</setup>
 	</action>
 	
@@ -20,11 +17,8 @@
 		<key-equivalent>control n</key-equivalent>
 		<setup>
 			<script>exec_command</script>
-			<arguments>
-				<array>
-					<string>osascript -e 'tell application "Palm Inspector" to quit'; open -a "Palm Inspector";</string>
-				</array>
-			</arguments>
+			
+			<command>osascript -e 'tell application "Palm Inspector" to quit'; open -a "Palm Inspector";</command>
 		</setup>
 	</action>
 	
@@ -33,11 +27,8 @@
 		<title>Launch Resource Monitor</title>
 		<setup>
 			<script>work_with_app</script>
-			<arguments>
-				<array>
-					<string>palm-worm</string>
-				</array>
-			</arguments>
+			
+			<command>palm-worm</command>
 		</setup>
 	</action>
 	
@@ -56,11 +47,8 @@
 		<key-equivalent>control shift s</key-equivalent>
 		<setup>
 			<script>terminal_command</script>
-			<arguments>
-				<array>
-					<string>echo "Password is blank, just hit enter"; ssh -p 5522 -L 5581:localhost:8080 root@localhost</string>
-				</array>
-			</arguments>
+			
+			<command>echo "Password is blank, just hit enter"; ssh -p 5522 -L 5581:localhost:8080 root@localhost</command>
 		</setup>
 	</action>
 	
@@ -70,11 +58,8 @@
 		<key-equivalent>control shift n</key-equivalent>
 		<setup>
 			<script>terminal_command</script>
-			<arguments>
-				<array>
-					<string>novaterm</string>
-				</array>
-			</arguments>
+			
+			<command>novaterm</command>
 		</setup>
 	</action>
 	
@@ -93,11 +78,8 @@
 		<key-equivalent>control shift r</key-equivalent>
 		<setup>
 			<script>work_with_app</script>
-			<arguments>
-				<array>
-					<string>palm-launch -i</string>
-				</array>
-			</arguments>
+			
+			<command>palm-launch -i</command>
 		</setup>
 	</action>
 	
@@ -107,11 +89,8 @@
 		<key-equivalent>control x</key-equivalent>
 		<setup>
 			<script>work_with_app</script>
-			<arguments>
-				<array>
-					<string>palm-launch -c</string>
-				</array>
-			</arguments>
+			
+			<command>palm-launch -c</command>
 		</setup>
 	</action>
 	
@@ -121,11 +100,8 @@
 		<key-equivalent>command control shift x</key-equivalent>
 		<setup>
 			<script>work_with_app</script>
-			<arguments>
-				<array>
-					<string>palm-install -r</string>
-				</array>
-			</arguments>
+			
+			<command>palm-install -r</command>
 		</setup>
 	</action>
 	

@@ -3,8 +3,8 @@
 
 var utils = require('webos_utils');
 
-exports.main = function(command) {
-	var cmd = utils.prepCommand(command);
+action.performWithContext = function(context, options) {
+	var cmd = utils.prepCommand(options.command);
 	var result = system.shell(cmd);
 	if (!result) {
 		return false;

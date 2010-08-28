@@ -2,8 +2,8 @@
 
 var utils = require('webos_utils');
 
-exports.main = function() {
-	var root = utils.commonFolder(true);
+action.performWithContext = function(context) {
+	var root = utils.commonFolder(context, true);
 	// We'll use the folder name for the default project name, so grab it
 	var finalFolder = root.substr(root.lastIndexOf('/') + 1);
 	// Since the bash profile isn't loaded for the user, make sure we have the WebOS SDK executables in the path using our utility function

@@ -3,8 +3,8 @@
 require.global('mootools-server');
 var utils = require('webos_utils');
 
-exports.main = function() {
-	var root = utils.commonOrRootFolder();
+action.performWithContext = function(context) {
+	var root = utils.commonOrRootFolder(context);
 	if (root === false) {
 		return false;
 	}
@@ -14,7 +14,7 @@ exports.main = function() {
 	// And grab the folder above that so we can CD there (can't pass full path to palm-package, sadly)
 	var sharedFolder = root.substring(0, root.lastIndexOf('/')).replace(/ /, '\\ ');
 	// Grab the app ID to launch the app
-	var projectID = utils.getAppID(root);
+	var projectID = utils.getAppID(context, root);
 	// Run the package command
 	var command = utils.prepCommand('cd ' + sharedFolder + '; palm-package --exclude="*.esproj" ' + projectFolder);
 	var result = system.shell(command);

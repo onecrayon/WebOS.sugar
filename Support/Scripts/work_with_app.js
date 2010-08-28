@@ -2,21 +2,21 @@
 
 var utils = require('webos_utils');
 
-exports.main = function(cmdPrefix) {
+action.performWithContext = function(context, options) {
 	// Find our root folder
-	var root = utils.commonOrRootFolder();
+	var root = utils.commonOrRootFolder(context);
 	if (root === false) {
 		return false;
 	}
 	
 	// Grab the contents of the appinfo.json file, and parse it from JSON
-	var projectID = utils.getAppID(root);
+	var projectID = utils.getAppID(context, root);
 	
 	// Find the workspace folder
 	var sharedFolder = root.substring(0, root.lastIndexOf('/')).replace(/ /, '\\ ');
 	
 	// Build out the command and run it
-	var command = utils.prepCommand('cd ' + sharedFolder + '; ' + cmdPrefix + ' ' + projectID);
+	var command = utils.prepCommand('cd ' + sharedFolder + '; ' + options.command + ' ' + projectID);
 	var result = system.shell(command);
 	system.log(result);
 	return true;

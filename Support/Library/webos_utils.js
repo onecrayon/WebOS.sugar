@@ -18,7 +18,7 @@ var toUnixPath = function(path, shellSafe) {
 };
 
 // Returns the folder shared by the selected files
-var commonFolder = function(shellSafe) {
+var commonFolder = function(context, shellSafe) {
 	var shellSafe = (!$chk(shellSafe) ? false : shellSafe);
 	// Setup the shared root directory (allows working in sub-folders)
 	var root = String(context.contextDirectoryForSelectedResources);
@@ -26,17 +26,17 @@ var commonFolder = function(shellSafe) {
 };
 
 // Returns the root project folder
-var rootFolder = function(shellSafe) {
+var rootFolder = function(context, shellSafe) {
 	var shellSafe = (!$chk(shellSafe) ? false : shellSafe);
 	// Setup the shared root directory (allows working in sub-folders)
 	var root = String(context.rootURL);
 	return toUnixPath(root, shellSafe);
 };
 
-var commonOrRootFolder = function(shellSafe) {
-	var root = NSString.stringWithString_(commonFolder());
+var commonOrRootFolder = function(context, shellSafe) {
+	var root = NSString.stringWithString_(commonFolder(context));
 	if (!checkForAppInfo(root)) {
-		root = NSString.stringWithString_(rootFolder());
+		root = NSString.stringWithString_(rootFolder(context));
 		if (!checkForAppInfo(root)) {
 			system.log('WebOS.sugar error: could not find root of project to package and install. Please select the root folder and try again.');
 			return false;
@@ -61,24 +61,24 @@ var getShellVar = function(varName, defaultText) {
 // Checks to see if appinfo.json is in the specified directory
 var checkForAppInfo = function(path) {
 	var target = path.stringByAppendingPathComponent_('appinfo.json');
-	if (NSFileManager.defaultManager.fileExistsAtPath_(target)) {
+	if (system.isFile(target)) {
 		return true;
 	} else {
 		return false;
 	}
 }
 
-var getAppID = function(root) {
+var getAppID = function(context, root) {
 	// If no root, then find it!
 	if ($type(root) != 'string') {
-		var root = commonOrRootFolder();
+		var root = commonOrRootFolder(context);
 		if (root === false) {
 			return '';
 		}
 	}
 	// Grab the contents of the appinfo.json file, and parse it from JSON
 	var appInfoFile = root.stringByAppendingPathComponent_('appinfo.json');
-	var appInfo = JSON.decode(String(SpiceController.read_(appInfoFile)));
+	var appInfo = JSON.decode(String(system.read(appInfoFile)));
 	return appInfo.id;
 }
 
