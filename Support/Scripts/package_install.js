@@ -1,6 +1,5 @@
 // Packages and installs the WebOS application
 
-require.global('mootools-server');
 var utils = require('webos_utils');
 
 action.performWithContext = function(context) {

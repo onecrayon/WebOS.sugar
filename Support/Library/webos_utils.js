@@ -1,4 +1,16 @@
-require.global('mootools-server');
+// Basic replacements for Mootools functions of old
+
+function $chk(obj) {
+	return !!(obj || obj === 0);
+}
+
+var JSON = {};
+
+JSON.decode = function(string, secure){
+	if (typeof string !== 'string' || !string.length) return null;
+	if (secure && !(/^[,:{}\[\]0-9.\-+Eaeflnr-u \n\r\t]*$/).test(string.replace(/\\./g, '@').replace(/"[^"\\\n\r]*"/g, ''))) return null;
+	return eval('(' + string + ')');
+};
 
 // Since bash doesn't load the user's profile, we have to manually add the SDK to the path
 // Running all commands through this function achieves this
@@ -70,7 +82,7 @@ var checkForAppInfo = function(path) {
 
 var getAppID = function(context, root) {
 	// If no root, then find it!
-	if ($type(root) != 'string') {
+	if (typeof root !== 'string') {
 		var root = commonOrRootFolder(context);
 		if (root === false) {
 			return '';
