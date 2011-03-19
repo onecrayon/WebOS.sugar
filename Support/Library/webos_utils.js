@@ -21,6 +21,8 @@ var prepCommand = function(command) {
 // Converts a file:// path into a standard Unix path; optionally safe for use on a shell
 var toUnixPath = function(path, shellSafe) {
 	var shellSafe = (!$chk(shellSafe) ? false : shellSafe);
+	// Make sure we have a real Javascript string, not an NSString
+	path = String(path);
 	if (path.lastIndexOf('/') == path.length - 1) {
 		path = path.substring(0, path.length - 1);
 	}
@@ -33,7 +35,17 @@ var toUnixPath = function(path, shellSafe) {
 var commonFolder = function(context, shellSafe) {
 	var shellSafe = (!$chk(shellSafe) ? false : shellSafe);
 	// Setup the shared root directory (allows working in sub-folders)
-	var root = String(context.contextDirectoryForSelectedResources);
+	var root = context.contextDirectoryURL;
+	if (root == null) {
+		// Means there's only one file selected, so grab its URL
+		root = context.URLs.objectAtIndex_(0);
+		// Check if the path is a directory
+		var isDir = new outArgument;
+		root.getResourceValue_forKey_error_(isDir, NSURLIsDirectoryKey, null);
+		if (isDir.outValue.boolValue) {
+			root = root.URLByDeletingLastPathComponent;
+		}
+	}
 	return toUnixPath(root, shellSafe);
 };
 
@@ -41,8 +53,14 @@ var commonFolder = function(context, shellSafe) {
 var rootFolder = function(context, shellSafe) {
 	var shellSafe = (!$chk(shellSafe) ? false : shellSafe);
 	// Setup the shared root directory (allows working in sub-folders)
-	var root = String(context.rootURL);
-	return toUnixPath(root, shellSafe);
+	// Well, this is a fine mess; E 2.0 no longer offers rootURL, so we have to go digging for it
+	var doc = context.windowForSheet.document;
+	if (doc.className == 'ESProjectDocument') {
+		var root = doc.directoryURL.path;
+		return toUnixPath(root, shellSafe);
+	} else {
+		return null;
+	}
 };
 
 var commonOrRootFolder = function(context, shellSafe) {
@@ -72,6 +90,9 @@ var getShellVar = function(varName, defaultText) {
 
 // Checks to see if appinfo.json is in the specified directory
 var checkForAppInfo = function(path) {
+	if (path === null) {
+		return false;
+	}
 	var target = path.stringByAppendingPathComponent_('appinfo.json');
 	if (system.isFile(target)) {
 		return true;
