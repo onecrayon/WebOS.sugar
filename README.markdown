@@ -4,12 +4,12 @@ WebOS.sugar for Espresso
 The WebOS.sugar allows you to develop your WebOS apps
 in the [Espresso][espresso] text editor for Mac.
 
-I developed WebOS.sugar so that I could create [TouchNote][touchnote]
+I developed WebOS.sugar so that I could create [TapNote][tapnote]
 in Espresso, and I'm sharing it under an MIT license
 so other people can benefit and contribute to it, as well.
 
    [espresso]: http://macrabbit.com/espresso/
-   [touchnote]: http://onecrayon.com/touchnote/
+   [tapnote]: http://onecrayon.com/tapnote/
 
 
 ### Installation
