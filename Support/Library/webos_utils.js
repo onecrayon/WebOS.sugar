@@ -77,12 +77,14 @@ var commonOrRootFolder = function(context, shellSafe) {
 
 // Grabs a shell variable and returns it, or the default if none
 var getShellVar = function(varName, defaultText) {
-	var shellVars = new Hash();
-	NSUserDefaults.standardUserDefaults.objectForKey_('TEAShellVariables').each(function(item) {
-		shellVars.set(item.variable, item.value);
-	});
-	if (shellVars.has(varName)) {
-		return shellVars.get(varName);
+	var shellVars = NSUserDefaults.standardUserDefaults.objectForKey_('TEAShellVariables');
+	var vars = {}, item;
+	for (var i = 0, count = shellVars.count; i < count; i++) {
+		item = shellVars.objectAtIndex_(i);
+		vars[item.variable] = item.value;
+	}
+	if (vars[varName]) {
+		return vars[varName];
 	} else {
 		return defaultText;
 	}
