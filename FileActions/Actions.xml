@@ -11,17 +11,6 @@
 		</setup>
 	</action>
 	
-	<action id="com.onecrayon.WebOS.LaunchInspector" category="actions.webos/webos.emulator-actions/1">
-		<class>Spice</class>
-		<title>Launch Inspector</title>
-		<key-equivalent>control n</key-equivalent>
-		<setup>
-			<script>exec_command</script>
-			
-			<command>osascript -e 'tell application "Palm Inspector" to quit'; open -a "Palm Inspector";</command>
-		</setup>
-	</action>
-	
 	<action id="com.onecrayon.WebOS.LaunchResourceMonitor" category="actions.webos/webos.emulator-actions/2">
 		<class>Spice</class>
 		<title>Launch Resource Monitor</title>
@@ -102,14 +91,6 @@
 			<script>work_with_app</script>
 			
 			<command>palm-install -r</command>
-		</setup>
-	</action>
-	
-	<action id="com.onecrayon.WebOS.NewApp" category="actions.webos/actions.rare/0">
-		<class>Spice</class>
-		<title>New WebOS App</title>
-		<setup>
-			<script>generate_app</script>
 		</setup>
 	</action>
 </action-recipes>
