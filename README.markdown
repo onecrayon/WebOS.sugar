@@ -14,11 +14,10 @@ so other people can benefit and contribute to it, as well.
 
 ### Installation
 
-**Important: WebOS.sugar requires [Spice.sugar][spice] 1.0b7
-or greater!** Make sure you install Spice prior to using the
-WebOS.sugar or nothing but the snippets will work.
+**Important: WebOS.sugar requires [Espresso 2.0][e2]
+or greater!**
 
-Once Spice is installed, [download WebOS.sugar][dl], unzip it, and
+Once Espresso 2.0 is installed, [download WebOS.sugar][dl], unzip it, and
 double click to install.
 
 If you have git installed, instead run this command and relaunch
@@ -27,23 +26,8 @@ Espresso:
     cd ~/Library/Application\ Support/Espresso/Sugars
     git clone git://github.com/onecrayon/WebOS.sugar.git
 
-   [spice]: http://onecrayon.com/spice/
+   [e2]: http://macrabbit.com/espresso/2/
    [dl]: http://github.com/downloads/onecrayon/WebOS.sugar/WebOS.sugar.zip
-
-### Known problems
-
-I've been using WebOS.sugar pretty heavily the past couple months,
-and don't know of any unfixed bugs. However, you should know:
-
-* Some actions in File&rarr;Actions&rarr;WebOS run a little slow.
-  There is no progress indicator at the moment, but you may notice
-  Espresso becoming less responsive while the action is completing.
-  This is a normal side effect of needing to run shell commands rather
-  than tying into an API.
-* If the Inspector is running, Launch Inspector doesn't always succeed
-  in relaunching it. I haven't found a workaround yet, so just be aware.
-
-Enjoy!
 
 ### Documentation
 
@@ -52,17 +36,15 @@ File&rarr;Actions&rarr;WebOS. They are also accessible by
 right clicking a folder or file in your project
 or using the gear menu next to FILES.
 
-**Launch Emulator** and **Launch Inspector** will do what they say
+**Launch Emulator** will do what it says
 on the tin (assuming you've installed the SDK), or will
 quit and then relaunch the program (if it's already running).
-This is probably useless for the emulator, but very handy
-for the Inspector.
 
 **Launch Resource Manager** will run palm-worm for your app.
 It will not relaunch it, so you'll have to close it down yourself.
 
 **View Log In Terminal** will open up a new Terminal window
-and subscribe you to your app's debugging log.
+and follow your app's debugging log.
 
 **SSH Into Emulator** will open up an SSH session to the emulator
 in Terminal.
@@ -73,11 +55,11 @@ in Terminal.
 app in the first device it finds. This is probably the action
 you will use the most, because it gives you very quick access
 to your most recent changes. Note that you _do not_ need to
-manually quit the app before running this action; the Emulator is
-smart enough to quit the app before installing and relaunching it.
+manually quit the app before running this action; both Emulator and
+device are smart enough to quit the app before installing and
+relaunching it.
 
-**Run App** simply runs the app, but does it with the -i argument
-so that you can use the Inspector. You probably won't need
+**Run App** simply runs the app. You probably won't need
 this much, since usually you'll have made changes you want to see.
 
 **Close App** and **Delete App** do what they claim they will.
@@ -85,33 +67,10 @@ Deleting the app will remove any app-specific data, so if you need
 to start from scratch as a first-run, use Delete and then Install
 And Run.
 
-**New WebOS App**.  This is a cool one. _Make sure the root folder
-you want to use is selected, or have no files or folders selected._
-This will create the basic file hierarchy for a new WebOS app in
-the selected folder (or the root folder of the project, if nothing
-is selected). You can set default company and reverse domain info
-by opening up the Preferences and adding the following keys to your
-custom shell variables list in the Advanced&rarr;TEA preferences:
-
-* COMPANY: My Company
-* REVERSE\_DOMAIN: com.mydomain
-
-There's also some snippets in the Actions&rarr;WebOS menu; I
-leave it to you to investigate those.
-
 ### Stuff I want to add
 
-I'm thinking about the best way to add "new scene" functionality.
-The tricky thing is I need to query the user for the name of the
-scene (I don't like how the WebOS Textmate bundle just uses the
-selected text, because it requires you to think ahead too much).
-
-I want to add a simple preferences area rather than rely on TEA's
-custom shell variables for generating new apps.
-
 I'd like a better selection of snippets, and adding CodeSense for
-Mojo objects would be awesome (but maybe not practical given time
-restraints).
+Enyo objects would be awesome.
 
 I'm also open to ideas; I think I've hit the major points of the
 command-line tools, but there's probably stuff I'm overlooking.
