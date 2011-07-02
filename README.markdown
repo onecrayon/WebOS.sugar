@@ -33,7 +33,7 @@ Espresso:
     git clone git://github.com/onecrayon/WebOS.sugar.git
 
    [e2]: http://macrabbit.com/espresso/2/
-   [dl]: http://github.com/downloads/onecrayon/WebOS.sugar/WebOS.sugar.zip
+   [dl]: http://onecrayon.com/downloads/WebOS.sugar.zip
 
 ## File Actions
 
