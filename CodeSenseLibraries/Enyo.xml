@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <codesense version="1.0">
-	<!-- LEFT OFF: json.js in documentation -->
 	
 	<!--Global variables-->
 	<set name="com.onecrayon.webos.global">
@@ -271,6 +270,83 @@
 				</append-dynamic>
 			</behavior>
 		</completion>
+		<!--xhr.js-->
+		<completion string="xhrGet">
+			<behavior>
+				<append-dynamic>
+					<matched-suffix>(\()|[^(]</matched-suffix>
+					<transform-into>(?1::(${1:arguments}\))</transform-into>
+				</append-dynamic>
+			</behavior>
+		</completion>
+		<completion string="xhrPost">
+			<behavior>
+				<append-dynamic>
+					<matched-suffix>(\()|[^(]</matched-suffix>
+					<transform-into>(?1::(${1:arguments}\))</transform-into>
+				</append-dynamic>
+			</behavior>
+		</completion>
+		<!--Dispatcher.js-->
+		<completion string="dispatch">
+			<behavior>
+				<append-dynamic>
+					<matched-suffix>(\()|[^(]</matched-suffix>
+					<transform-into>(?1::(${1:event}\))</transform-into>
+				</append-dynamic>
+			</behavior>
+		</completion>
+		<completion string="bubble">
+			<behavior>
+				<append-dynamic>
+					<matched-suffix>(\()|[^(]</matched-suffix>
+					<transform-into>(?1::(${1:event}\))</transform-into>
+				</append-dynamic>
+			</behavior>
+		</completion>
+		<!--startup.js-->
+		<completion string="requiresWindow">
+			<behavior>
+				<append-dynamic>
+					<matched-suffix>(\()|[^(]</matched-suffix>
+					<transform-into>(?1::(${1:function}\))</transform-into>
+				</append-dynamic>
+			</behavior>
+		</completion>
+		<completion string="hasWindow">
+			<behavior>
+				<append-dynamic>
+					<matched-suffix>(\()|[^(]</matched-suffix>
+					<transform-into>(?1::(\))</transform-into>
+				</append-dynamic>
+			</behavior>
+		</completion>
+		<!--system.js-->
+		<completion string="setAllowedOrientation">
+			<behavior>
+				<append-dynamic>
+					<matched-suffix>(\()|[^(]</matched-suffix>
+					<transform-into>(?1::(${1:orientation}\))</transform-into>
+				</append-dynamic>
+			</behavior>
+		</completion>
+		<completion string="getWindowOrientation"/>
+		<completion string="sendOrientationChange"/>
+		<completion string="setFullScreen">
+			<behavior>
+				<append-dynamic>
+					<matched-suffix>(\()|[^(]</matched-suffix>
+					<transform-into>(?1::(${1:bool}\))</transform-into>
+				</append-dynamic>
+			</behavior>
+		</completion>
+		<completion string="ready"/>
+		<completion string="fetchAppId"/>
+		<completion string="fetchAppRootPath"/>
+		<completion string="fetchAppInfo"/>
+		<completion string="fetchFrameworkConfig"/>
+		<completion string="fetchRootFrameworkConfig"/>
+		<completion string="fetchDeviceInfo"/>
 	</set>
 	
 	<!--Root-level properties-->
@@ -279,9 +355,162 @@
 		<completion string="g11n"/>
 		<completion string="dom"/>
 		<completion string="string"/>
-		<!--Kinds-->
+		<completion string="json"/>
+		<completion string="dispatcher"/>
+		<completion string="transitions"/>
+		<completion string="keyboard"/>
+		<completion string="windows"/>
+		<completion string="palmServices"/>
+	</set>
+	
+	<!--Kinds-->
+	<set name="com.onecrayon.webos.enyo.kinds">
 		<completion string="Object"/>
 		<completion string="Component"/>
+		<completion string="Animator"/>
+		<completion string="ApplicationEvents"/>
+		<completion string="DomNode"/>
+		<completion string="DomNodeBuilder"/>
+		<completion string="ContainedDomBuilder"/>
+		<completion string="Control"/>
+		<completion string="Grid"/>
+		<completion string="HLayout"/>
+		<completion string="FlexLayout"/>
+		<completion string="HFlexLayout"/>
+		<completion string="VFlexLayout"/>
+		<completion string="HFlexBox"/>
+		<completion string="VFlexBox"/>
+		<completion string="ScrollStrategy"/>
+		<completion string="ScrollFades"/>
+		<completion string="DragScroller"/>
+		<completion string="BasicScroller"/>
+		<completion string="SnapScroller"/>
+		<completion string="FadeScroller"/>
+		<completion string="Flyweight"/>
+		<completion string="Repeater"/>
+		<completion string="VirtualRepeater"/>
+		<completion string="LazyControl"/>
+		<completion string="Image"/>
+		<completion string="Stateful"/>
+		<completion string="CustomButton"/>
+		<completion string="Button"/>
+		<completion string="AjaxContent"/>
+		<completion string="HtmlContent"/>
+		<completion string="BasicInput"/>
+		<completion string="Input"/>
+		<completion string="InputBox"/>
+		<completion string="BasicRichText"/>
+		<completion string="RichText"/>
+		<completion string="AnimatedImage"/>
+		<completion string="Iframe"/>
+		<completion string="PopupLayer"/>
+		<completion string="Popup"/>
+		<completion string="Scrim"/>
+		<completion string="LabeledContainer"/>
+		<completion string="Progress"/>
+		<completion string="Box"/>
+		<completion string="BasicDrawer"/>
+		<completion string="Drawer"/>
+		<completion string="Pane"/>
+		<completion string="PaneLayout"/>
+		<completion string="FloatingHeader"/>
+		<completion string="BasicService"/>
+		<completion string="Service"/>
+		<completion string="MockService"/>
+		<completion string="WebService"/>
+		<completion string="Sound"/>
+		<completion string="Video"/>
+		<completion string="Dashboard"/>
+		<completion string="CrossAppUI"/>
+		<completion string="CrossAppResult"/>
+		<completion string="FilePicker"/>
+		<completion string="Spinner"/>
+		<completion string="NotificationButton"/>
+		<completion string="IconButton"/>
+		<completion string="Pushable"/>
+		<completion string="ActivityButton"/>
+		<completion string="GrabButton"/>
+		<completion string="PasswordInput"/>
+		<completion string="RoundedInput"/>
+		<completion string="ToolInput"/>
+		<completion string="SearchInput"/>
+		<completion string="RoundedSearchInput"/>
+		<completion string="ToolSearchInput"/>
+		<completion string="RoundedInputBox"/>
+		<completion string="ToolInputBox"/>
+		<completion string="OrderedContainer"/>
+		<completion string="ToolButton"/>
+		<completion string="ButtonHeader"/>
+		<completion string="ToggleButton"/>
+		<completion string="CheckBox"/>
+		<completion string="PrevNextBanner"/>
+		<completion string="BasicWebView"/>
+		<completion string="WebView"/>
+		<completion string="SizeableImage"/>
+		<completion string="ScrollingImage"/>
+		<completion string="CroppableImage"/>
+		<completion string="BasicCarousel"/>
+		<completion string="CarouselInternal"/>
+		<completion string="VirtualCarousel"/>
+		<completion string="ViewImage"/>
+		<completion string="ImageView"/>
+		<completion string="Divider"/>
+		<completion string="AlphaDivider"/>
+		<completion string="Header"/>
+		<completion string="PageHeader"/>
+		<completion string="Toolbar"/>
+		<completion string="Item"/>
+		<completion string="SwipeableItem"/>
+		<completion string="Menu"/>
+		<completion string="MenuItem"/>
+		<completion string="PopupSelect"/>
+		<completion string="PopupList"/>
+		<completion string="ModalDialog"/>
+		<completion string="CustomListSelector"/>
+		<completion string="ListSelector"/>
+		<completion string="RadioGroup"/>
+		<completion string="RadioButton"/>
+		<completion string="TabGroup"/>
+		<completion string="TabButton"/>
+		<completion string="AppMenu"/>
+		<completion string="AppMenuItem"/>
+		<completion string="HelpMenu"/>
+		<completion string="ToolButtonGroup"/>
+		<completion string="EditMenu"/>
+		<completion string="GroupedToolButton"/>
+		<completion string="RadioToolButton"/>
+		<completion string="RadioToolButtonGroup"/>
+		<completion string="PickerButton"/>
+		<completion string="Picker"/>
+		<completion string="IntegerPicker"/>
+		<completion string="PickerGroup"/>
+		<completion string="TimePicker"/>
+		<completion string="DatePicker"/>
+		<completion string="ProgressBar"/>
+		<completion string="ProgressBarItem"/>
+		<completion string="ProgressButton"/>
+		<completion string="Slider"/>
+		<completion string="ProgressSlider"/>
+		<completion string="ConfirmPrompt"/>
+		<completion string="Spacer"/>
+		<completion string="Hybrid"/>
+		<completion string="Group"/>
+		<completion string="RowGroup"/>
+		<completion string="DividerDrawer"/>
+		<completion string="Toaster"/>
+		<completion string="Dialog"/>
+		<completion string="DialogPrompt"/>
+		<completion string="SlidingView"/>
+		<completion string="SlidingPane"/>
+		<completion string="PalmService"/>
+		<completion string="SystemService"/>
+		<completion string="DbService"/>
+		<completion string="TempDbService"/>
+		<completion string="WebOsPalmServiceBridge"/>
+		<completion string="Selection"/>
+		<completion string="VirtualList"/>
+		<completion string="DbList"/>
+		<completion string="DbRepeaterList"/>
 	</set>
 	
 	<!--G11n-->
@@ -360,6 +589,78 @@
 			</behavior>
 		</completion>
 		<completion string="DurationFmt">
+			<behavior>
+				<append-dynamic>
+					<matched-suffix>(\()|[^(]</matched-suffix>
+					<transform-into>(?1::(${1:parameters}\))</transform-into>
+				</append-dynamic>
+			</behavior>
+		</completion>
+		<completion string="Address">
+			<behavior>
+				<append-dynamic>
+					<matched-suffix>(\()|[^(]</matched-suffix>
+					<transform-into>(?1::(${1:freeformAddress}, ${2:parameters}\))</transform-into>
+				</append-dynamic>
+			</behavior>
+		</completion>
+		<completion string="AddressFmt">
+			<behavior>
+				<append-dynamic>
+					<matched-suffix>(\()|[^(]</matched-suffix>
+					<transform-into>(?1::(${1:parameters}\))</transform-into>
+				</append-dynamic>
+			</behavior>
+		</completion>
+		<completion string="Name">
+			<behavior>
+				<append-dynamic>
+					<matched-suffix>(\()|[^(]</matched-suffix>
+					<transform-into>(?1::(${1:name}, ${2:parameters}\))</transform-into>
+				</append-dynamic>
+			</behavior>
+		</completion>
+		<completion string="NameFmt">
+			<behavior>
+				<append-dynamic>
+					<matched-suffix>(\()|[^(]</matched-suffix>
+					<transform-into>(?1::(${1:parameters}\))</transform-into>
+				</append-dynamic>
+			</behavior>
+		</completion>
+		<completion string="NumPlan">
+			<behavior>
+				<append-dynamic>
+					<matched-suffix>(\()|[^(]</matched-suffix>
+					<transform-into>(?1::(${1:parameters}\))</transform-into>
+				</append-dynamic>
+			</behavior>
+		</completion>
+		<completion string="FmtStyles">
+			<behavior>
+				<append-dynamic>
+					<matched-suffix>(\()|[^(]</matched-suffix>
+					<transform-into>(?1::(${1:locale}\))</transform-into>
+				</append-dynamic>
+			</behavior>
+		</completion>
+		<completion string="PhoneFmt">
+			<behavior>
+				<append-dynamic>
+					<matched-suffix>(\()|[^(]</matched-suffix>
+					<transform-into>(?1::(${1:parameters}\))</transform-into>
+				</append-dynamic>
+			</behavior>
+		</completion>
+		<completion string="PhoneNumber">
+			<behavior>
+				<append-dynamic>
+					<matched-suffix>(\()|[^(]</matched-suffix>
+					<transform-into>(?1::(${1:number}, ${2:parameters}\))</transform-into>
+				</append-dynamic>
+			</behavior>
+		</completion>
+		<completion string="GeoLocator">
 			<behavior>
 				<append-dynamic>
 					<matched-suffix>(\()|[^(]</matched-suffix>
@@ -532,6 +833,234 @@
 		</completion>
 		<completion string="toBase64"/>
 		<completion string="fromBase64"/>
+	</set>
+	
+	<!--JSON-->
+	<set name="com.onecrayon.webos.enyo.json.methods">
+		<completion string="parse">
+			<behavior>
+				<append-dynamic>
+					<matched-suffix>(\()|[^(]</matched-suffix>
+					<transform-into>(?1::(${1:json}\))</transform-into>
+				</append-dynamic>
+			</behavior>
+		</completion>
+		<completion string="stringify">
+			<behavior>
+				<append-dynamic>
+					<matched-suffix>(\()|[^(]</matched-suffix>
+					<transform-into>(?1::(${1:object}${2:, ${3:replacer}, ${4:space}}\))</transform-into>
+				</append-dynamic>
+			</behavior>
+		</completion>
+	</set>
+	
+	<!--Dispatcher-->
+	<set name="com.onecrayon.webos.enyo.json.methods">
+		<completion string="dispatch">
+			<behavior>
+				<append-dynamic>
+					<matched-suffix>(\()|[^(]</matched-suffix>
+					<transform-into>(?1::(${1:event}\))</transform-into>
+				</append-dynamic>
+			</behavior>
+		</completion>
+		<completion string="findDefaultTarget">
+			<behavior>
+				<append-dynamic>
+					<matched-suffix>(\()|[^(]</matched-suffix>
+					<transform-into>(?1::(${1:event}\))</transform-into>
+				</append-dynamic>
+			</behavior>
+		</completion>
+		<completion string="findDispatchTarget">
+			<behavior>
+				<append-dynamic>
+					<matched-suffix>(\()|[^(]</matched-suffix>
+					<transform-into>(?1::(${1:node}\))</transform-into>
+				</append-dynamic>
+			</behavior>
+		</completion>
+	</set>
+	
+	<!--Transitions-->
+	<set name="com.onecrayon.webos.enyo.transitions.properties">
+		<completion string="Simple"/>
+		<completion string="LeftRightFlyin"/>
+		<completion string="Fade"/>
+	</set>
+	
+	<!--Keyboard-->
+	<set name="com.onecrayon.webos.enyo.keyboard.methods">
+		<behavior>
+			<append-dynamic>
+				<matched-suffix>(\()|[^(]</matched-suffix>
+				<transform-into>(?1::(${1:string}\))</transform-into>
+			</append-dynamic>
+		</behavior>
+		<completion string="setResizesWindow">
+			<behavior>
+				<append-dynamic>
+					<matched-suffix>(\()|[^(]</matched-suffix>
+					<transform-into>(?1::(${1:bool}\))</transform-into>
+				</append-dynamic>
+			</behavior>
+		</completion>
+		<completion string="setManualMode">
+			<behavior>
+				<append-dynamic>
+					<matched-suffix>(\()|[^(]</matched-suffix>
+					<transform-into>(?1::(${1:bool}\))</transform-into>
+				</append-dynamic>
+			</behavior>
+		</completion>
+		<completion string="suspend"/>
+		<completion string="resume"/>
+		<completion string="show">
+			<behavior>
+				<append-dynamic>
+					<matched-suffix>(\()|[^(]</matched-suffix>
+					<transform-into>(?1::(${1:type}\))</transform-into>
+				</append-dynamic>
+			</behavior>
+		</completion>
+		<completion string="hide"/>
+		<completion string="forceShow">
+			<behavior>
+				<append-dynamic>
+					<matched-suffix>(\()|[^(]</matched-suffix>
+					<transform-into>(?1::(${1:type}\))</transform-into>
+				</append-dynamic>
+			</behavior>
+		</completion>
+		<completion string="forceHide"/>
+		<completion string="isShowing"/>
+		<completion string="isManualMode"/>
+	</set>
+	
+	<!--Windows-->
+	<set name="com.onecrayon.webos.enyo.windows.methods">
+		<behavior>
+			<append-dynamic>
+				<matched-suffix>(\()|[^(]</matched-suffix>
+				<transform-into>(?1::(${1:string}\))</transform-into>
+			</append-dynamic>
+		</behavior>
+		<completion string="activate">
+			<behavior>
+				<append-dynamic>
+					<matched-suffix>(\()|[^(]</matched-suffix>
+					<transform-into>(?1::(${1:url}, ${2:name}${3:, ${4:parameters}}\))</transform-into>
+				</append-dynamic>
+			</behavior>
+		</completion>
+		<completion string="activateWindow">
+			<behavior>
+				<append-dynamic>
+					<matched-suffix>(\()|[^(]</matched-suffix>
+					<transform-into>(?1::(${1:window}, ${2:parameters}\))</transform-into>
+				</append-dynamic>
+			</behavior>
+		</completion>
+		<completion string="addBannerMessage">
+			<behavior>
+				<append-dynamic>
+					<matched-suffix>(\()|[^(]</matched-suffix>
+					<transform-into>(?1::(${1:message}, ${2:stringifiedJSON}\))</transform-into>
+				</append-dynamic>
+			</behavior>
+		</completion>
+		<completion string="deactivate">
+			<behavior>
+				<append-dynamic>
+					<matched-suffix>(\()|[^(]</matched-suffix>
+					<transform-into>(?1::(${1:name}\))</transform-into>
+				</append-dynamic>
+			</behavior>
+		</completion>
+		<completion string="deactivateWindow">
+			<behavior>
+				<append-dynamic>
+					<matched-suffix>(\()|[^(]</matched-suffix>
+					<transform-into>(?1::(${1:window}\))</transform-into>
+				</append-dynamic>
+			</behavior>
+		</completion>
+		<completion string="fetchWindow">
+			<behavior>
+				<append-dynamic>
+					<matched-suffix>(\()|[^(]</matched-suffix>
+					<transform-into>(?1::(${1:name}\))</transform-into>
+				</append-dynamic>
+			</behavior>
+		</completion>
+		<completion string="getActiveWindow"/>
+		<completion string="getWindows"/>
+		<completion string="openDashboard">
+			<behavior>
+				<append-dynamic>
+					<matched-suffix>(\()|[^(]</matched-suffix>
+					<transform-into>(?1::(${1:url}, ${2:name}, ${4:parameters}, ${5:attributes}\))</transform-into>
+				</append-dynamic>
+			</behavior>
+		</completion>
+		<completion string="openPopup">
+			<behavior>
+				<append-dynamic>
+					<matched-suffix>(\()|[^(]</matched-suffix>
+					<transform-into>(?1::(${1:url}, ${2:name}, ${3:parameters}, ${4:attributes}, ${5:height}, ${6:throb}\))</transform-into>
+				</append-dynamic>
+			</behavior>
+		</completion>
+		<completion string="openWindow">
+			<behavior>
+				<append-dynamic>
+					<matched-suffix>(\()|[^(]</matched-suffix>
+					<transform-into>(?1::(${1:url}, ${2:name}, ${3:parameters}\))</transform-into>
+				</append-dynamic>
+			</behavior>
+		</completion>
+		<completion string="removeBannerMessage">
+			<behavior>
+				<append-dynamic>
+					<matched-suffix>(\()|[^(]</matched-suffix>
+					<transform-into>(?1::(${1:id}\))</transform-into>
+				</append-dynamic>
+			</behavior>
+		</completion>
+		<completion string="renameWindow">
+			<behavior>
+				<append-dynamic>
+					<matched-suffix>(\()|[^(]</matched-suffix>
+					<transform-into>(?1::(${1:window}, ${2:name}\))</transform-into>
+				</append-dynamic>
+			</behavior>
+		</completion>
+		<completion string="setWindowParams">
+			<behavior>
+				<append-dynamic>
+					<matched-suffix>(\()|[^(]</matched-suffix>
+					<transform-into>(?1::(${1:window}, ${2:parameters}\))</transform-into>
+				</append-dynamic>
+			</behavior>
+		</completion>
+		<completion string="setWindowProperties">
+			<behavior>
+				<append-dynamic>
+					<matched-suffix>(\()|[^(]</matched-suffix>
+					<transform-into>(?1::(${1:window}, ${2:properties}\))</transform-into>
+				</append-dynamic>
+			</behavior>
+		</completion>
+	</set>
+	
+	<!--PalmServices-->
+	<set name="com.onecrayon.webos.enyo.palmServices.properties">
+		<completion string="system"/>
+		<completion string="telephony"/>
+		<completion string="database"/>
+		<completion string="application"/>
+		<completion string="accounts"/>
 	</set>
 	
 </codesense>
