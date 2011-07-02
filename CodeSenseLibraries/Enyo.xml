@@ -2,7 +2,7 @@
 <codesense version="1.0">
 	
 	<!--Global variables-->
-	<set name="com.onecrayon.webos.global">
+	<set name="com.onecrayon.webos.enyo.global">
 		<completion string="enyo"/>
 		<completion string="$L">
 			<behavior>
@@ -351,7 +351,7 @@
 	
 	<!--Root-level properties-->
 	<set name="com.onecrayon.webos.enyo.properties">
-		<!--Objects-->
+		<completion string="application"/>
 		<completion string="g11n"/>
 		<completion string="dom"/>
 		<completion string="string"/>
@@ -734,7 +734,7 @@
 	</set>
 	
 	<!--DOM-->
-	<set name="com.onecrayon.webos.enyo.g11n.methods">
+	<set name="com.onecrayon.webos.enyo.dom.methods">
 		<behavior>
 			<append-dynamic>
 				<matched-suffix>(\()|[^(]</matched-suffix>
@@ -856,7 +856,7 @@
 	</set>
 	
 	<!--Dispatcher-->
-	<set name="com.onecrayon.webos.enyo.json.methods">
+	<set name="com.onecrayon.webos.enyo.dispatcher.methods">
 		<completion string="dispatch">
 			<behavior>
 				<append-dynamic>
@@ -1061,6 +1061,146 @@
 		<completion string="database"/>
 		<completion string="application"/>
 		<completion string="accounts"/>
+	</set>
+	
+	<!--Global/common kind methods-->
+	<set name="com.onecrayon.webos.enyo.kind.methods">
+		<behavior>
+			<append-dynamic>
+				<matched-suffix>(\()|[^(]</matched-suffix>
+				<transform-into>(?1::(${1:string}\))</transform-into>
+			</append-dynamic>
+		</behavior>
+		<!--Object.js-->
+		<completion string="log"/>
+		<completion string="warn"/>
+		<completion string="error"/>
+		<!--Component.js-->
+		<completion string="createComponent">
+			<behavior>
+				<append-dynamic>
+					<matched-suffix>(\()|[^(]</matched-suffix>
+					<transform-into>(?1::(${1:component}${2:, ${3:otherInfo}}\))</transform-into>
+				</append-dynamic>
+			</behavior>
+		</completion>
+		<completion string="createComponents">
+			<behavior>
+				<append-dynamic>
+					<matched-suffix>(\()|[^(]</matched-suffix>
+					<transform-into>(?1::(${1:components}${2:, ${3:otherInfo}}\))</transform-into>
+				</append-dynamic>
+			</behavior>
+		</completion>
+		<completion string="destroy"/>
+		<completion string="destroyComponents"/>
+		<completion string="getComponents"/>
+		<!--DomNode.js-->
+		<completion string="addClass">
+			<behavior>
+				<append-dynamic>
+					<matched-suffix>(\()|[^(]</matched-suffix>
+					<transform-into>(?1::(${1:singleClass}\))</transform-into>
+				</append-dynamic>
+			</behavior>
+		</completion>
+		<completion string="addRemoveClass">
+			<behavior>
+				<append-dynamic>
+					<matched-suffix>(\()|[^(]</matched-suffix>
+					<transform-into>(?1::(${1:singleClass}, ${2:trueToAdd}\))</transform-into>
+				</append-dynamic>
+			</behavior>
+		</completion>
+		<completion string="addStyles">
+			<behavior>
+				<append-dynamic>
+					<matched-suffix>(\()|[^(]</matched-suffix>
+					<transform-into>(?1::(${1:stylesString}\))</transform-into>
+				</append-dynamic>
+			</behavior>
+		</completion>
+		<completion string="applyStyle">
+			<behavior>
+				<append-dynamic>
+					<matched-suffix>(\()|[^(]</matched-suffix>
+					<transform-into>(?1::(${1:styleName}, ${2:value}\))</transform-into>
+				</append-dynamic>
+			</behavior>
+		</completion>
+		<completion string="getClassName"/>
+		<completion string="hasClass">
+			<behavior>
+				<append-dynamic>
+					<matched-suffix>(\()|[^(]</matched-suffix>
+					<transform-into>(?1::(${1:singleClass}\))</transform-into>
+				</append-dynamic>
+			</behavior>
+		</completion>
+		<completion string="hasNode"/>
+		<completion string="removeClass">
+			<behavior>
+				<append-dynamic>
+					<matched-suffix>(\()|[^(]</matched-suffix>
+					<transform-into>(?1::(${1:singleClass}\))</transform-into>
+				</append-dynamic>
+			</behavior>
+		</completion>
+		<completion string="setAttribute">
+			<behavior>
+				<append-dynamic>
+					<matched-suffix>(\()|[^(]</matched-suffix>
+					<transform-into>(?1::(${1:name}, ${2:value}\))</transform-into>
+				</append-dynamic>
+			</behavior>
+		</completion>
+		<completion string="setClassName">
+			<behavior>
+				<append-dynamic>
+					<matched-suffix>(\()|[^(]</matched-suffix>
+					<transform-into>(?1::(${1:className}\))</transform-into>
+				</append-dynamic>
+			</behavior>
+		</completion>
+		<completion string="setStyle">
+			<behavior>
+				<append-dynamic>
+					<matched-suffix>(\()|[^(]</matched-suffix>
+					<transform-into>(?1::(${1:styleString}\))</transform-into>
+				</append-dynamic>
+			</behavior>
+		</completion>
+		<!--DomNodeBuilder.js-->
+		<completion string="hide"/>
+		<completion string="render"/>
+		<completion string="renderInto">
+			<behavior>
+				<append-dynamic>
+					<matched-suffix>(\()|[^(]</matched-suffix>
+					<transform-into>(?1::(${1:parentNode}\))</transform-into>
+				</append-dynamic>
+			</behavior>
+		</completion>
+		<completion string="show"/>
+		<!--Control.js-->
+		<completion string="broadcastMessage">
+			<behavior>
+				<append-dynamic>
+					<matched-suffix>(\()|[^(]</matched-suffix>
+					<transform-into>(?1::(${1:messageName}, ${2:arguments}\))</transform-into>
+				</append-dynamic>
+			</behavior>
+		</completion>
+		<completion string="destroyControls"/>
+		<completion string="getControls"/>
+		<completion string="indexOfControl">
+			<behavior>
+				<append-dynamic>
+					<matched-suffix>(\()|[^(]</matched-suffix>
+					<transform-into>(?1::(${1:control}\))</transform-into>
+				</append-dynamic>
+			</behavior>
+		</completion>
 	</set>
 	
 </codesense>

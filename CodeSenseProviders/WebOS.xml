@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<codesense>
+
+	<!--Global-->
+	<provider>
+		<selector>js, js *:not(string,string *,comment)</selector>
+		<completions>com.onecrayon.webos.enyo.global</completions>
+		<complete-match>(?&lt;!\.|\[|\(|,)\b[a-zA-Z]*</complete-match>
+	</provider>
+	
+	<!--Enyo methods and properties-->
+	<provider>
+		<selector>js, js *:not(string,string *,comment)</selector>
+		<completions>com.onecrayon.webos.enyo.methods</completions>
+		<completions>com.onecrayon.webos.enyo.properties</completions>
+		<completions>com.onecrayon.webos.enyo.kinds</completions>
+		<complete-match capture="1">\benyo\.([\w\.]*)</complete-match>
+	</provider>
+	
+	<!--Kinds in strings-->
+	<provider>
+		<selector>js variable.property:has-child(name[text="kind"]) + string, js variable.property:has-child(name[text="kind"]) + string > end</selector>
+		<completions>com.onecrayon.webos.enyo.kinds</completions>
+		<complete-match capture="1">(?:\benyo\.)?([a-zA-Z]*)</complete-match>
+	</provider>
+	
+	<!--Generic Kind methods-->
+	<provider>
+		<selector>js, js *:not(string,string *,comment)</selector>
+		<completions>com.onecrayon.webos.enyo.kind.methods</completions>
+		<complete-match capture="1">\.([a-z]\w*)</complete-match>
+	</provider>
+	
+	<!--G11n-->
+	<provider>
+		<selector>js, js *:not(string,string *,comment)</selector>
+		<completions>com.onecrayon.webos.enyo.g11n.methods</completions>
+		<completions>com.onecrayon.webos.enyo.g11n.properties</completions>
+		<complete-match capture="1">\benyo\.g11n\.(\w*)</complete-match>
+	</provider>
+	
+	<!--G11n.Char-->
+	<provider>
+		<selector>js, js *:not(string,string *,comment)</selector>
+		<completions>com.onecrayon.webos.enyo.g11n.char.methods</completions>
+		<complete-match capture="1">\benyo\.g11n\.Char\.(\w*)</complete-match>
+	</provider>
+	
+	<!--DOM-->
+	<provider>
+		<selector>js, js *:not(string,string *,comment)</selector>
+		<completions>com.onecrayon.webos.enyo.dom.methods</completions>
+		<complete-match capture="1">\benyo\.dom\.(\w*)</complete-match>
+	</provider>
+	
+	<!--enyo.string-->
+	<provider>
+		<selector>js, js *:not(string,string *,comment)</selector>
+		<completions>com.onecrayon.webos.enyo.string.methods</completions>
+		<complete-match capture="1">\benyo\.string\.(\w*)</complete-match>
+	</provider>
+	
+	<!--enyo.json-->
+	<provider>
+		<selector>js, js *:not(string,string *,comment)</selector>
+		<completions>com.onecrayon.webos.enyo.json.methods</completions>
+		<complete-match capture="1">\benyo\.json\.(\w*)</complete-match>
+	</provider>
+	
+	<!--enyo.dispatcher-->
+	<provider>
+		<selector>js, js *:not(string,string *,comment)</selector>
+		<completions>com.onecrayon.webos.enyo.dispatcher.methods</completions>
+		<complete-match capture="1">\benyo\.dispatcher\.(\w*)</complete-match>
+	</provider>
+	
+	<!--enyo.transitions-->
+	<provider>
+		<selector>js, js *:not(string,string *,comment)</selector>
+		<completions>com.onecrayon.webos.enyo.transitions.methods</completions>
+		<complete-match capture="1">\benyo\.transitions\.(\w*)</complete-match>
+	</provider>
+	
+	<!--enyo.keyboard-->
+	<provider>
+		<selector>js, js *:not(string,string *,comment)</selector>
+		<completions>com.onecrayon.webos.enyo.keyboard.methods</completions>
+		<complete-match capture="1">\benyo\.keyboard\.(\w*)</complete-match>
+	</provider>
+	
+	<!--enyo.windows-->
+	<provider>
+		<selector>js, js *:not(string,string *,comment)</selector>
+		<completions>com.onecrayon.webos.enyo.windows.methods</completions>
+		<complete-match capture="1">\benyo\.windows\.(\w*)</complete-match>
+	</provider>
+	
+	<!--enyo.palmServices-->
+	<provider>
+		<selector>js, js *:not(string,string *,comment)</selector>
+		<completions>com.onecrayon.webos.enyo.palmServices.properties</completions>
+		<complete-match capture="1">\benyo\.palmServices\.(\w*)</complete-match>
+	</provider>
+	
+</codesense>
