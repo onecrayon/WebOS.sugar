@@ -8,19 +8,25 @@ I developed WebOS.sugar so that I could create [TapNote][tapnote]
 in Espresso, and I'm sharing it under an MIT license
 so other people can benefit and contribute to it, as well.
 
+**Features**
+
+* Automated common actions (build and run app, launch emulator,
+  follow logs, etc.)
+* Comprehensive Enyo CodeSense for quicker, easier coding
+* Limited Mojo snippets
+
    [espresso]: http://macrabbit.com/espresso/
    [tapnote]: http://onecrayon.com/tapnote/
 
 
-### Installation
+## Installation
 
-**Important: WebOS.sugar requires [Espresso 2.0][e2]
-or greater!**
+**WebOS.sugar requires [Espresso 2.0][e2] or greater!**
 
-Once Espresso 2.0 is installed, [download WebOS.sugar][dl], unzip it, and
-double click to install.
+Once Espresso 2.0 is installed, [download the WebOS.sugar][dl],
+unzip it, and double click to install.
 
-If you have git installed, instead run this command and relaunch
+If you have git installed, instead run this command then relaunch
 Espresso:
 
     cd ~/Library/Application\ Support/Espresso/Sugars
@@ -29,7 +35,7 @@ Espresso:
    [e2]: http://macrabbit.com/espresso/2/
    [dl]: http://github.com/downloads/onecrayon/WebOS.sugar/WebOS.sugar.zip
 
-### Documentation
+## File Actions
 
 Most of the actions you'll want to use are located in
 File&rarr;Actions&rarr;WebOS. They are also accessible by
@@ -67,19 +73,17 @@ Deleting the app will remove any app-specific data, so if you need
 to start from scratch as a first-run, use Delete and then Install
 And Run.
 
-### Stuff I want to add
+## Comments and requests
 
-I'd like a better selection of snippets, and adding CodeSense for
-Enyo objects would be awesome.
+Now that comprehensive Enyo CodeSense is integrated, I consider
+the WebOS.sugar feature-complete. If you have any problems,
+suggestions, or requests though I would love to hear them.
+[Drop me a line](http://onecrayon.com/about/contact/) if you have
+feedback.
 
-I'm also open to ideas; I think I've hit the major points of the
-command-line tools, but there's probably stuff I'm overlooking.
-[Drop me a line](http://onecrayon.com/about/contact/)
-if you have some feedback.
+## Released under the MIT license
 
-### Released under an MIT license
-
-Copyright (c) 2010 Ian Beck
+Copyright (c) 2010-2011 Ian Beck
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
