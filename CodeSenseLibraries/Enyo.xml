@@ -1,0 +1,537 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<codesense version="1.0">
+	<!-- LEFT OFF: json.js in documentation -->
+	
+	<!--Global variables-->
+	<set name="com.onecrayon.webos.global">
+		<completion string="enyo"/>
+		<completion string="$L">
+			<behavior>
+				<append-dynamic>
+					<matched-suffix>(\()|[^(]</matched-suffix>
+					<transform-into>(?1::(${1:string}\))</transform-into>
+				</append-dynamic>
+			</behavior>
+		</completion>
+	</set>
+	
+	<!--Root-level methods-->
+	<set name="com.onecrayon.webos.enyo.methods">
+		<behavior>
+			<append-dynamic>
+				<matched-suffix>(\()|[^(]</matched-suffix>
+				<transform-into>(?1::(\))</transform-into>
+			</append-dynamic>
+		</behavior>
+		<!--log.js-->
+		<completion string="setLogLevel">
+			<behavior>
+				<append-dynamic>
+					<matched-suffix>(\()|[^(]</matched-suffix>
+					<transform-into>(?1::(${1:level}\))</transform-into>
+				</append-dynamic>
+			</behavior>
+		</completion>
+		<completion string="log"/>
+		<completion string="warn"/>
+		<completion string="error"/>
+		<!--lang.js-->
+		<completion string="setObject">
+			<behavior>
+				<append-dynamic>
+					<matched-suffix>(\()|[^(]</matched-suffix>
+					<transform-into>(?1::(${1:name}, ${2:value}, ${3:context}\))</transform-into>
+				</append-dynamic>
+			</behavior>
+		</completion>
+		<completion string="getObject">
+			<behavior>
+				<append-dynamic>
+					<matched-suffix>(\()|[^(]</matched-suffix>
+					<transform-into>(?1::(${1:name}, ${2:create}, ${3:context}\))</transform-into>
+				</append-dynamic>
+			</behavior>
+		</completion>
+		<completion string="cap">
+			<behavior>
+				<append-dynamic>
+					<matched-suffix>(\()|[^(]</matched-suffix>
+					<transform-into>(?1::(${1:string}\))</transform-into>
+				</append-dynamic>
+			</behavior>
+		</completion>
+		<completion string="uncap">
+			<behavior>
+				<append-dynamic>
+					<matched-suffix>(\()|[^(]</matched-suffix>
+					<transform-into>(?1::(${1:string}\))</transform-into>
+				</append-dynamic>
+			</behavior>
+		</completion>
+		<completion string="isString">
+			<behavior>
+				<append-dynamic>
+					<matched-suffix>(\()|[^(]</matched-suffix>
+					<transform-into>(?1::(${1:it}\))</transform-into>
+				</append-dynamic>
+			</behavior>
+		</completion>
+		<completion string="isFunction">
+			<behavior>
+				<append-dynamic>
+					<matched-suffix>(\()|[^(]</matched-suffix>
+					<transform-into>(?1::(${1:it}\))</transform-into>
+				</append-dynamic>
+			</behavior>
+		</completion>
+		<completion string="isArray">
+			<behavior>
+				<append-dynamic>
+					<matched-suffix>(\()|[^(]</matched-suffix>
+					<transform-into>(?1::(${1:it}\))</transform-into>
+				</append-dynamic>
+			</behavior>
+		</completion>
+		<completion string="indexOf">
+			<behavior>
+				<append-dynamic>
+					<matched-suffix>(\()|[^(]</matched-suffix>
+					<transform-into>(?1::(${1:element}, ${2:array}\))</transform-into>
+				</append-dynamic>
+			</behavior>
+		</completion>
+		<completion string="remove">
+			<behavior>
+				<append-dynamic>
+					<matched-suffix>(\()|[^(]</matched-suffix>
+					<transform-into>(?1::(${1:element}, ${2:array}\))</transform-into>
+				</append-dynamic>
+			</behavior>
+		</completion>
+		<completion string="forEach">
+			<behavior>
+				<append-dynamic>
+					<matched-suffix>(\()|[^(]</matched-suffix>
+					<transform-into>(?1::(${1:array}, ${2:function}, ${3:context}\))</transform-into>
+				</append-dynamic>
+			</behavior>
+		</completion>
+		<completion string="cloneArray">
+			<behavior>
+				<append-dynamic>
+					<matched-suffix>(\()|[^(]</matched-suffix>
+					<transform-into>(?1::(${1:arrayLike}, ${2:offset}, ${3:startWith}\))</transform-into>
+				</append-dynamic>
+			</behavior>
+		</completion>
+		<completion string="clone">
+			<behavior>
+				<append-dynamic>
+					<matched-suffix>(\()|[^(]</matched-suffix>
+					<transform-into>(?1::(${1:object}\))</transform-into>
+				</append-dynamic>
+			</behavior>
+		</completion>
+		<completion string="mixin">
+			<behavior>
+				<append-dynamic>
+					<matched-suffix>(\()|[^(]</matched-suffix>
+					<transform-into>(?1::(${1:target}, ${2:source}\))</transform-into>
+				</append-dynamic>
+			</behavior>
+		</completion>
+		<completion string="bind">
+			<behavior>
+				<append-dynamic>
+					<matched-suffix>(\()|[^(]</matched-suffix>
+					<transform-into>(?1::(${1:scope}, ${2:method}${3:, arg1, arg2, ...}\))</transform-into>
+				</append-dynamic>
+			</behavior>
+		</completion>
+		<!--Oop.js-->
+		<completion string="kind">
+			<behavior>
+				<append-dynamic>
+					<matched-suffix>(\()|[^(]</matched-suffix>
+					<transform-into>(?1::(${1:properties}\))</transform-into>
+				</append-dynamic>
+			</behavior>
+		</completion>
+		<!--dom.js-->
+		<completion string="byId">
+			<behavior>
+				<append-dynamic>
+					<matched-suffix>(\()|[^(]</matched-suffix>
+					<transform-into>(?1::(${1:id}${2:, ${3:document}}\))</transform-into>
+				</append-dynamic>
+			</behavior>
+		</completion>
+		<completion string="stopEvent">
+			<behavior>
+				<append-dynamic>
+					<matched-suffix>(\()|[^(]</matched-suffix>
+					<transform-into>(?1::(${1:event}\))</transform-into>
+				</append-dynamic>
+			</behavior>
+		</completion>
+		<completion string="getCookie">
+			<behavior>
+				<append-dynamic>
+					<matched-suffix>(\()|[^(]</matched-suffix>
+					<transform-into>(?1::(${1:name}\))</transform-into>
+				</append-dynamic>
+			</behavior>
+		</completion>
+		<completion string="setCookie">
+			<behavior>
+				<append-dynamic>
+					<matched-suffix>(\()|[^(]</matched-suffix>
+					<transform-into>(?1::(${1:name}, ${2:value}${3:, ${4:properties}}\))</transform-into>
+				</append-dynamic>
+			</behavior>
+		</completion>
+		<!--util.js-->
+		<completion string="macroize">
+			<behavior>
+				<append-dynamic>
+					<matched-suffix>(\()|[^(]</matched-suffix>
+					<transform-into>(?1::(${1:text}, ${2:map}${3:, ${4:pattern}}\))</transform-into>
+				</append-dynamic>
+			</behavior>
+		</completion>
+		<completion string="objectToQuery">
+			<behavior>
+				<append-dynamic>
+					<matched-suffix>(\()|[^(]</matched-suffix>
+					<transform-into>(?1::(${1:object}\))</transform-into>
+				</append-dynamic>
+			</behavior>
+		</completion>
+		<completion string="irand">
+			<behavior>
+				<append-dynamic>
+					<matched-suffix>(\()|[^(]</matched-suffix>
+					<transform-into>(?1::(${1:range}\))</transform-into>
+				</append-dynamic>
+			</behavior>
+		</completion>
+		<completion string="call">
+			<behavior>
+				<append-dynamic>
+					<matched-suffix>(\()|[^(]</matched-suffix>
+					<transform-into>(?1::(${1:object}, ${2:method}${3:, ${4:arguments}}\))</transform-into>
+				</append-dynamic>
+			</behavior>
+		</completion>
+		<completion string="asyncMethod">
+			<behavior>
+				<append-dynamic>
+					<matched-suffix>(\()|[^(]</matched-suffix>
+					<transform-into>(?1::(${1:scope}, ${2:method}\))</transform-into>
+				</append-dynamic>
+			</behavior>
+		</completion>
+		<completion string="nextTick">
+			<behavior>
+				<append-dynamic>
+					<matched-suffix>(\()|[^(]</matched-suffix>
+					<transform-into>(?1::(${1:scope}, ${2:method}\))</transform-into>
+				</append-dynamic>
+			</behavior>
+		</completion>
+		<completion string="job">
+			<behavior>
+				<append-dynamic>
+					<matched-suffix>(\()|[^(]</matched-suffix>
+					<transform-into>(?1::(${1:jobName}, ${2:job}, ${3:wait}\))</transform-into>
+				</append-dynamic>
+			</behavior>
+		</completion>
+		<completion string="job.stop">
+			<behavior>
+				<append-dynamic>
+					<matched-suffix>(\()|[^(]</matched-suffix>
+					<transform-into>(?1::(${1:jobName}\))</transform-into>
+				</append-dynamic>
+			</behavior>
+		</completion>
+		<completion string="time">
+			<behavior>
+				<append-dynamic>
+					<matched-suffix>(\()|[^(]</matched-suffix>
+					<transform-into>(?1::(${1:name}\))</transform-into>
+				</append-dynamic>
+			</behavior>
+		</completion>
+		<completion string="timeEnd">
+			<behavior>
+				<append-dynamic>
+					<matched-suffix>(\()|[^(]</matched-suffix>
+					<transform-into>(?1::(${1:name}\))</transform-into>
+				</append-dynamic>
+			</behavior>
+		</completion>
+	</set>
+	
+	<!--Root-level properties-->
+	<set name="com.onecrayon.webos.enyo.properties">
+		<!--Objects-->
+		<completion string="g11n"/>
+		<completion string="dom"/>
+		<completion string="string"/>
+		<!--Kinds-->
+		<completion string="Object"/>
+		<completion string="Component"/>
+	</set>
+	
+	<!--G11n-->
+	<set name="com.onecrayon.webos.enyo.g11n.methods">
+		<behavior>
+			<append-dynamic>
+				<matched-suffix>(\()|[^(]</matched-suffix>
+				<transform-into>(?1::(\))</transform-into>
+			</append-dynamic>
+		</behavior>
+		<completion string="currentLocale"/>
+		<completion string="formatLocale"/>
+		<completion string="phoneLocale"/>
+		<completion string="setLocale">
+			<behavior>
+				<append-dynamic>
+					<matched-suffix>(\()|[^(]</matched-suffix>
+					<transform-into>(?1::(${1:parameters}\))</transform-into>
+				</append-dynamic>
+			</behavior>
+		</completion>
+		<completion string="Fmts">
+			<behavior>
+				<append-dynamic>
+					<matched-suffix>(\()|[^(]</matched-suffix>
+					<transform-into>(?1::(${1:parameters}\))</transform-into>
+				</append-dynamic>
+			</behavior>
+		</completion>
+		<completion string="Locale">
+			<behavior>
+				<append-dynamic>
+					<matched-suffix>(\()|[^(]</matched-suffix>
+					<transform-into>(?1::(${1:specifier}\))</transform-into>
+				</append-dynamic>
+			</behavior>
+		</completion>
+		<completion string="Template">
+			<behavior>
+				<append-dynamic>
+					<matched-suffix>(\()|[^(]</matched-suffix>
+					<transform-into>(?1::(${1:template}, ${2:pattern}\))</transform-into>
+				</append-dynamic>
+			</behavior>
+		</completion>
+		<completion string="Resources">
+			<behavior>
+				<append-dynamic>
+					<matched-suffix>(\()|[^(]</matched-suffix>
+					<transform-into>(?1::(${1:parameters}\))</transform-into>
+				</append-dynamic>
+			</behavior>
+		</completion>
+		<completion string="TzFmt">
+			<behavior>
+				<append-dynamic>
+					<matched-suffix>(\()|[^(]</matched-suffix>
+					<transform-into>(?1::(${1:parameters}\))</transform-into>
+				</append-dynamic>
+			</behavior>
+		</completion>
+		<completion string="DateFmt">
+			<behavior>
+				<append-dynamic>
+					<matched-suffix>(\()|[^(]</matched-suffix>
+					<transform-into>(?1::(${1:parameters}\))</transform-into>
+				</append-dynamic>
+			</behavior>
+		</completion>
+		<completion string="NumberFmt">
+			<behavior>
+				<append-dynamic>
+					<matched-suffix>(\()|[^(]</matched-suffix>
+					<transform-into>(?1::(${1:options}\))</transform-into>
+				</append-dynamic>
+			</behavior>
+		</completion>
+		<completion string="DurationFmt">
+			<behavior>
+				<append-dynamic>
+					<matched-suffix>(\()|[^(]</matched-suffix>
+					<transform-into>(?1::(${1:parameters}\))</transform-into>
+				</append-dynamic>
+			</behavior>
+		</completion>
+	</set>
+	
+	<set name="com.onecrayon.webos.enyo.g11n.properties">
+		<completion string="Char"/>
+	</set>
+	
+	<set name="com.onecrayon.webos.enyo.g11n.char.methods">
+		<completion string="isIdeo">
+			<behavior>
+				<append-dynamic>
+					<matched-suffix>(\()|[^(]</matched-suffix>
+					<transform-into>(?1::(${1:string}\))</transform-into>
+				</append-dynamic>
+			</behavior>
+		</completion>
+		<completion string="isPunct">
+			<behavior>
+				<append-dynamic>
+					<matched-suffix>(\()|[^(]</matched-suffix>
+					<transform-into>(?1::(${1:string}\))</transform-into>
+				</append-dynamic>
+			</behavior>
+		</completion>
+		<completion string="isSpace">
+			<behavior>
+				<append-dynamic>
+					<matched-suffix>(\()|[^(]</matched-suffix>
+					<transform-into>(?1::(${1:string}\))</transform-into>
+				</append-dynamic>
+			</behavior>
+		</completion>
+		<completion string="toUpper">
+			<behavior>
+				<append-dynamic>
+					<matched-suffix>(\()|[^(]</matched-suffix>
+					<transform-into>(?1::(${1:string}\))</transform-into>
+				</append-dynamic>
+			</behavior>
+		</completion>
+		<completion string="isLetter">
+			<behavior>
+				<append-dynamic>
+					<matched-suffix>(\()|[^(]</matched-suffix>
+					<transform-into>(?1::(${1:string}\))</transform-into>
+				</append-dynamic>
+			</behavior>
+		</completion>
+		<completion string="getIndexChars">
+			<behavior>
+				<append-dynamic>
+					<matched-suffix>(\()|[^(]</matched-suffix>
+					<transform-into>(?1::(${1:localeSpecifier}\))</transform-into>
+				</append-dynamic>
+			</behavior>
+		</completion>
+		<completion string="getBaseString">
+			<behavior>
+				<append-dynamic>
+					<matched-suffix>(\()|[^(]</matched-suffix>
+					<transform-into>(?1::(${1:string}, ${2:locale}\))</transform-into>
+				</append-dynamic>
+			</behavior>
+		</completion>
+	</set>
+	
+	<!--DOM-->
+	<set name="com.onecrayon.webos.enyo.g11n.methods">
+		<behavior>
+			<append-dynamic>
+				<matched-suffix>(\()|[^(]</matched-suffix>
+				<transform-into>(?1::(${1:node}\))</transform-into>
+			</append-dynamic>
+		</behavior>
+		<completion string="_findTarget">
+			<behavior>
+				<append-dynamic>
+					<matched-suffix>(\()|[^(]</matched-suffix>
+					<transform-into>(?1::(${1:node}, ${2:x}, ${3:y}\))</transform-into>
+				</append-dynamic>
+			</behavior>
+		</completion>
+		<completion string="calcBorderExtents"/>
+		<completion string="calcMarginExtents"/>
+		<completion string="calcNodeOffset">
+			<behavior>
+				<append-dynamic>
+					<matched-suffix>(\()|[^(]</matched-suffix>
+					<transform-into>(?1::(${1:node}, ${2:parentNode}\))</transform-into>
+				</append-dynamic>
+			</behavior>
+		</completion>
+		<completion string="calcNodeOffset2">
+			<behavior>
+				<append-dynamic>
+					<matched-suffix>(\()|[^(]</matched-suffix>
+					<transform-into>(?1::(${1:node}, ${2:originNode}\))</transform-into>
+				</append-dynamic>
+			</behavior>
+		</completion>
+		<completion string="findTarget">
+			<behavior>
+				<append-dynamic>
+					<matched-suffix>(\()|[^(]</matched-suffix>
+					<transform-into>(?1::(${1:control}, ${2:x}, ${3:y}\))</transform-into>
+				</append-dynamic>
+			</behavior>
+		</completion>
+		<completion string="getClipboard">
+			<behavior>
+				<append-dynamic>
+					<matched-suffix>(\()|[^(]</matched-suffix>
+					<transform-into>(?1::(${1:callback}\))</transform-into>
+				</append-dynamic>
+			</behavior>
+		</completion>
+		<completion string="getComputedStyle"/>
+		<completion string="getComputedStyleValue">
+			<behavior>
+				<append-dynamic>
+					<matched-suffix>(\()|[^(]</matched-suffix>
+					<transform-into>(?1::(${1:node}, ${2:property}, ${3:computedStyle}\))</transform-into>
+				</append-dynamic>
+			</behavior>
+		</completion>
+		<completion string="setClipboard">
+			<behavior>
+				<append-dynamic>
+					<matched-suffix>(\()|[^(]</matched-suffix>
+					<transform-into>(?1::(${1:string}\))</transform-into>
+				</append-dynamic>
+			</behavior>
+		</completion>
+	</set>
+	
+	<!--String-->
+	<set name="com.onecrayon.webos.enyo.string.methods">
+		<behavior>
+			<append-dynamic>
+				<matched-suffix>(\()|[^(]</matched-suffix>
+				<transform-into>(?1::(${1:string}\))</transform-into>
+			</append-dynamic>
+		</behavior>
+		<completion string="applyFilterHighlight">
+			<behavior>
+				<append-dynamic>
+					<matched-suffix>(\()|[^(]</matched-suffix>
+					<transform-into>(?1::(${1:string}, ${2:searchText}, ${3:className}\))</transform-into>
+				</append-dynamic>
+			</behavior>
+		</completion>
+		<completion string="escapeHtml"/>
+		<completion string="escapeHtmlAttribute"/>
+		<completion string="stripQuotes"/>
+		<completion string="trim"/>
+		<completion string="removeHtml"/>
+		<completion string="runTextIndexer">
+			<behavior>
+				<append-dynamic>
+					<matched-suffix>(\()|[^(]</matched-suffix>
+					<transform-into>(?1::(${1:string}, ${2:options}\))</transform-into>
+				</append-dynamic>
+			</behavior>
+		</completion>
+		<completion string="toBase64"/>
+		<completion string="fromBase64"/>
+	</set>
+	
+</codesense>
