@@ -1081,6 +1081,15 @@
 				<transform-into>(?1::(${1:string}\))</transform-into>
 			</append-dynamic>
 		</behavior>
+		<!--Parent method invocation-->
+		<completion string="inherited">
+		<behavior>
+			<append-dynamic>
+				<matched-suffix>(\()|[^(]</matched-suffix>
+				<transform-into>(?1::(arguments\)$0)</transform-into>
+			</append-dynamic>
+		</behavior>
+		</completion>
 		<!--Object.js-->
 		<completion string="log"/>
 		<completion string="warn"/>
