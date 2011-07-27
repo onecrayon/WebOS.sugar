@@ -905,7 +905,7 @@
 		<behavior>
 			<append-dynamic>
 				<matched-suffix>(\()|[^(]</matched-suffix>
-				<transform-into>(?1::(${1:string}\))</transform-into>
+				<transform-into>(?1::(\))</transform-into>
 			</append-dynamic>
 		</behavior>
 		<completion string="setResizesWindow">
