@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'WebOS' target in the 'WebOS' project
+//
+
+#ifdef __OBJC__
+    #import <Cocoa/Cocoa.h>
+#endif

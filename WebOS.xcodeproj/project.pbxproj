@@ -1,0 +1,309 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7A2D613D13E0D7C600EE958D /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A2D613C13E0D7C600EE958D /* Cocoa.framework */; };
+		7A2D614713E0D7C600EE958D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7A2D614513E0D7C600EE958D /* InfoPlist.strings */; };
+		7A2D616913E0DBFB00EE958D /* CodeSenseLibraries in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7A2D616413E0DBF300EE958D /* CodeSenseLibraries */; };
+		7A2D616A13E0DBFB00EE958D /* CodeSenseProviders in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7A2D616513E0DBF300EE958D /* CodeSenseProviders */; };
+		7A2D616B13E0DBFB00EE958D /* FileActions in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7A2D616613E0DBF300EE958D /* FileActions */; };
+		7A2D616C13E0DBFB00EE958D /* TextActions in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7A2D616813E0DBF300EE958D /* TextActions */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		7A2D615513E0DB0900EE958D /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 1;
+			files = (
+				7A2D616913E0DBFB00EE958D /* CodeSenseLibraries in CopyFiles */,
+				7A2D616A13E0DBFB00EE958D /* CodeSenseProviders in CopyFiles */,
+				7A2D616B13E0DBFB00EE958D /* FileActions in CopyFiles */,
+				7A2D616C13E0DBFB00EE958D /* TextActions in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		7A2D613913E0D7C600EE958D /* WebOS.sugar */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WebOS.sugar; sourceTree = BUILT_PRODUCTS_DIR; };
+		7A2D613C13E0D7C600EE958D /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		7A2D613F13E0D7C600EE958D /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		7A2D614013E0D7C600EE958D /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		7A2D614113E0D7C600EE958D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		7A2D614413E0D7C600EE958D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = Info.plist; path = "Supporting Files/Info.plist"; sourceTree = "<group>"; };
+		7A2D614613E0D7C600EE958D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		7A2D614813E0D7C600EE958D /* WebOS_Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WebOS_Prefix.pch; path = "Supporting Files/WebOS_Prefix.pch"; sourceTree = "<group>"; };
+		7A2D616413E0DBF300EE958D /* CodeSenseLibraries */ = {isa = PBXFileReference; lastKnownFileType = folder; name = CodeSenseLibraries; path = "XML Based/CodeSenseLibraries"; sourceTree = SOURCE_ROOT; };
+		7A2D616513E0DBF300EE958D /* CodeSenseProviders */ = {isa = PBXFileReference; lastKnownFileType = folder; name = CodeSenseProviders; path = "XML Based/CodeSenseProviders"; sourceTree = SOURCE_ROOT; };
+		7A2D616613E0DBF300EE958D /* FileActions */ = {isa = PBXFileReference; lastKnownFileType = folder; name = FileActions; path = "XML Based/FileActions"; sourceTree = SOURCE_ROOT; };
+		7A2D616813E0DBF300EE958D /* TextActions */ = {isa = PBXFileReference; lastKnownFileType = folder; name = TextActions; path = "XML Based/TextActions"; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7A2D613613E0D7C600EE958D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7A2D613D13E0D7C600EE958D /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7A2D612E13E0D7C600EE958D = {
+			isa = PBXGroup;
+			children = (
+				7A2D614213E0D7C600EE958D /* WebOS */,
+				7A2D613B13E0D7C600EE958D /* Frameworks */,
+				7A2D613A13E0D7C600EE958D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7A2D613A13E0D7C600EE958D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7A2D613913E0D7C600EE958D /* WebOS.sugar */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7A2D613B13E0D7C600EE958D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7A2D613C13E0D7C600EE958D /* Cocoa.framework */,
+				7A2D613E13E0D7C600EE958D /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7A2D613E13E0D7C600EE958D /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7A2D613F13E0D7C600EE958D /* AppKit.framework */,
+				7A2D614013E0D7C600EE958D /* CoreData.framework */,
+				7A2D614113E0D7C600EE958D /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		7A2D614213E0D7C600EE958D /* WebOS */ = {
+			isa = PBXGroup;
+			children = (
+				7A2D616313E0DBDB00EE958D /* XML Based */,
+				7A2D614313E0D7C600EE958D /* Supporting Files */,
+			);
+			path = WebOS;
+			sourceTree = "<group>";
+		};
+		7A2D614313E0D7C600EE958D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7A2D614413E0D7C600EE958D /* Info.plist */,
+				7A2D614513E0D7C600EE958D /* InfoPlist.strings */,
+				7A2D614813E0D7C600EE958D /* WebOS_Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7A2D616313E0DBDB00EE958D /* XML Based */ = {
+			isa = PBXGroup;
+			children = (
+				7A2D616413E0DBF300EE958D /* CodeSenseLibraries */,
+				7A2D616513E0DBF300EE958D /* CodeSenseProviders */,
+				7A2D616613E0DBF300EE958D /* FileActions */,
+				7A2D616813E0DBF300EE958D /* TextActions */,
+			);
+			name = "XML Based";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7A2D613813E0D7C600EE958D /* WebOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7A2D614B13E0D7C600EE958D /* Build configuration list for PBXNativeTarget "WebOS" */;
+			buildPhases = (
+				7A2D613513E0D7C600EE958D /* Sources */,
+				7A2D613613E0D7C600EE958D /* Frameworks */,
+				7A2D613713E0D7C600EE958D /* Resources */,
+				7A2D615513E0DB0900EE958D /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WebOS;
+			productName = WebOS;
+			productReference = 7A2D613913E0D7C600EE958D /* WebOS.sugar */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7A2D613013E0D7C600EE958D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0410;
+				ORGANIZATIONNAME = MacRabbit;
+			};
+			buildConfigurationList = 7A2D613313E0D7C600EE958D /* Build configuration list for PBXProject "WebOS" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7A2D612E13E0D7C600EE958D;
+			productRefGroup = 7A2D613A13E0D7C600EE958D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7A2D613813E0D7C600EE958D /* WebOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7A2D613713E0D7C600EE958D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7A2D614713E0D7C600EE958D /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7A2D613513E0D7C600EE958D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		7A2D614513E0D7C600EE958D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7A2D614613E0D7C600EE958D /* en */,
+			);
+			name = InfoPlist.strings;
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7A2D614913E0D7C600EE958D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		7A2D614A13E0D7C600EE958D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		7A2D614C13E0D7C600EE958D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_PATH = /Applications/Espresso.app;
+				BUNDLE_LOADER = "$(APPLICATION_PATH)/Contents/MacOS/Espresso";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Supporting Files/WebOS_Prefix.pch";
+				HEADER_SEARCH_PATHS = "$(APPLICATION_PATH)/Contents/Headers";
+				INFOPLIST_FILE = "Supporting Files/Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx10.6;
+				WRAPPER_EXTENSION = sugar;
+			};
+			name = Debug;
+		};
+		7A2D614D13E0D7C600EE958D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_PATH = /Applications/Espresso.app;
+				BUNDLE_LOADER = "$(APPLICATION_PATH)/Contents/MacOS/Espresso";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Supporting Files/WebOS_Prefix.pch";
+				HEADER_SEARCH_PATHS = "$(APPLICATION_PATH)/Contents/Headers";
+				INFOPLIST_FILE = "Supporting Files/Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx10.6;
+				WRAPPER_EXTENSION = sugar;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7A2D613313E0D7C600EE958D /* Build configuration list for PBXProject "WebOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7A2D614913E0D7C600EE958D /* Debug */,
+				7A2D614A13E0D7C600EE958D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7A2D614B13E0D7C600EE958D /* Build configuration list for PBXNativeTarget "WebOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7A2D614C13E0D7C600EE958D /* Debug */,
+				7A2D614D13E0D7C600EE958D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7A2D613013E0D7C600EE958D /* Project object */;
+}
