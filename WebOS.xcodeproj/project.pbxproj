@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		7A2D613D13E0D7C600EE958D /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A2D613C13E0D7C600EE958D /* Cocoa.framework */; };
-		7A2D614713E0D7C600EE958D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7A2D614513E0D7C600EE958D /* InfoPlist.strings */; };
 		7A2D616913E0DBFB00EE958D /* CodeSenseLibraries in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7A2D616413E0DBF300EE958D /* CodeSenseLibraries */; };
 		7A2D616A13E0DBFB00EE958D /* CodeSenseProviders in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7A2D616513E0DBF300EE958D /* CodeSenseProviders */; };
 		7A2D616B13E0DBFB00EE958D /* FileActions in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7A2D616613E0DBF300EE958D /* FileActions */; };
@@ -38,7 +37,6 @@
 		7A2D614013E0D7C600EE958D /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		7A2D614113E0D7C600EE958D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		7A2D614413E0D7C600EE958D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = Info.plist; path = "Supporting Files/Info.plist"; sourceTree = "<group>"; };
-		7A2D614613E0D7C600EE958D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		7A2D614813E0D7C600EE958D /* WebOS_Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WebOS_Prefix.pch; path = "Supporting Files/WebOS_Prefix.pch"; sourceTree = "<group>"; };
 		7A2D616413E0DBF300EE958D /* CodeSenseLibraries */ = {isa = PBXFileReference; lastKnownFileType = folder; name = CodeSenseLibraries; path = "XML Based/CodeSenseLibraries"; sourceTree = SOURCE_ROOT; };
 		7A2D616513E0DBF300EE958D /* CodeSenseProviders */ = {isa = PBXFileReference; lastKnownFileType = folder; name = CodeSenseProviders; path = "XML Based/CodeSenseProviders"; sourceTree = SOURCE_ROOT; };
@@ -107,7 +105,6 @@
 			isa = PBXGroup;
 			children = (
 				7A2D614413E0D7C600EE958D /* Info.plist */,
-				7A2D614513E0D7C600EE958D /* InfoPlist.strings */,
 				7A2D614813E0D7C600EE958D /* WebOS_Prefix.pch */,
 			);
 			name = "Supporting Files";
@@ -176,7 +173,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7A2D614713E0D7C600EE958D /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -191,18 +187,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		7A2D614513E0D7C600EE958D /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				7A2D614613E0D7C600EE958D /* en */,
-			);
-			name = InfoPlist.strings;
-			path = "Supporting Files";
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		7A2D614913E0D7C600EE958D /* Debug */ = {
