@@ -8,6 +8,15 @@
 
 
 
-@interface WebOSGenericAction : NSObject
+@interface WebOSGenericAction : NSObject {
+    
+}
+
+- (NSURL *)projectURLForContext:(id)context;
+- (NSURL *)sharedURLForContext:(id)context;
+- (BOOL)appInfoExistsForURL:(NSURL *)url;
+- (NSURL *)appRootFolderForContext:(id)context;
+- (NSString *)appIDForContext:(id)context;
+- (NSString *)runCommands:(NSString *)commands withEnv:(NSDictionary *)env;
 
 @end
