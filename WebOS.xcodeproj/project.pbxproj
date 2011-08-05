@@ -25,6 +25,7 @@
 		7A2D616A13E0DBFB00EE958D /* CodeSenseProviders in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7A2D616513E0DBF300EE958D /* CodeSenseProviders */; };
 		7A2D616B13E0DBFB00EE958D /* FileActions in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7A2D616613E0DBF300EE958D /* FileActions */; };
 		7A2D616C13E0DBFB00EE958D /* TextActions in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7A2D616813E0DBF300EE958D /* TextActions */; };
+		7ACB84F413EC342F008C1617 /* WebOSLaunchEmulator.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ACB84F313EC342F008C1617 /* WebOSLaunchEmulator.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -83,6 +84,8 @@
 		7A2D616513E0DBF300EE958D /* CodeSenseProviders */ = {isa = PBXFileReference; lastKnownFileType = folder; name = CodeSenseProviders; path = "XML Based/CodeSenseProviders"; sourceTree = SOURCE_ROOT; };
 		7A2D616613E0DBF300EE958D /* FileActions */ = {isa = PBXFileReference; lastKnownFileType = folder; name = FileActions; path = "XML Based/FileActions"; sourceTree = SOURCE_ROOT; };
 		7A2D616813E0DBF300EE958D /* TextActions */ = {isa = PBXFileReference; lastKnownFileType = folder; name = TextActions; path = "XML Based/TextActions"; sourceTree = SOURCE_ROOT; };
+		7ACB84F213EC342F008C1617 /* WebOSLaunchEmulator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WebOSLaunchEmulator.h; path = Classes/WebOSLaunchEmulator.h; sourceTree = SOURCE_ROOT; };
+		7ACB84F313EC342F008C1617 /* WebOSLaunchEmulator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WebOSLaunchEmulator.m; path = Classes/WebOSLaunchEmulator.m; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +105,8 @@
 			children = (
 				7A16CEFE13E1AD370060A0F5 /* WebOSGenericAction.h */,
 				7A16CEFF13E1AD370060A0F5 /* WebOSGenericAction.m */,
+				7ACB84F213EC342F008C1617 /* WebOSLaunchEmulator.h */,
+				7ACB84F313EC342F008C1617 /* WebOSLaunchEmulator.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -281,6 +286,7 @@
 				7A2978F813EAE1D0004D5DC7 /* SBJsonTokeniser.m in Sources */,
 				7A2978F913EAE1D0004D5DC7 /* SBJsonUTF8Stream.m in Sources */,
 				7A2978FA13EAE1D0004D5DC7 /* SBJsonWriter.m in Sources */,
+				7ACB84F413EC342F008C1617 /* WebOSLaunchEmulator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
