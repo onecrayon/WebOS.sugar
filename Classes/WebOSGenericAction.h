@@ -16,6 +16,7 @@
 - (NSURL *)sharedURLForContext:(id)context;
 - (BOOL)appInfoExistsForURL:(NSURL *)url;
 - (NSURL *)appRootFolderForContext:(id)context;
+- (NSDictionary *)appInfoForContext:(id)context;
 - (NSString *)appIDForContext:(id)context;
 - (NSString *)runCommands:(NSString *)commands withEnv:(NSDictionary *)env;
 

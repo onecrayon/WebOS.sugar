@@ -10,4 +10,6 @@
 
 @interface WebOSPackageAndInstall : WebOSGenericAction
 
+- (BOOL)performActionWithContext:(id)context error:(NSError **)outError;
+
 @end

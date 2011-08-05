@@ -41,11 +41,8 @@
 	</action>
 	
 	<action id="com.onecrayon.webos.file-actions.package-install" category="actions.webos/webos.app-actions/0">
-		<class>Spice</class>
+		<class>WebOSPackageAndInstall</class>
 		<key-equivalent>control r</key-equivalent>
-		<setup>
-			<script>package_install</script>
-		</setup>
 	</action>
 	
 	<action id="com.onecrayon.webos.file-actions.run-app" category="actions.webos/webos.app-actions/1">

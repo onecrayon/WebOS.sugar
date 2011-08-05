@@ -37,7 +37,7 @@
     NSURL *sharedFolder = [root URLByDeletingLastPathComponent];
     NSString *cdSharedFolder = [NSString stringWithFormat:@"cd \"%@\";", [sharedFolder path], nil];
     NSString *finalCommand = [NSString stringWithFormat:@"%@ %@ %@", cdSharedFolder, command, appID, nil];
-    NSLog([self runCommands:finalCommand withEnv:nil]);
+    NSLog(@"%@", [self runCommands:finalCommand withEnv:nil]);
     return YES;
 }
 

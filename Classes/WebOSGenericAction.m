@@ -82,7 +82,7 @@
     return root;
 }
 
-- (NSString *)appIDForContext:(id)context
+- (NSDictionary *)appInfoForContext:(id)context
 {
     NSURL *root = [self appRootFolderForContext:context];
     if (root == nil) {
@@ -90,7 +90,15 @@
         return nil;
     }
     // Grab the contents of the file and parse as JSON
-    NSDictionary *appInfo = [[NSString stringWithContentsOfFile:[root path] encoding:NSUTF8StringEncoding error:NULL] JSONValue];
+    return [[NSString stringWithContentsOfFile:[root path] encoding:NSUTF8StringEncoding error:NULL] JSONValue];
+}
+
+- (NSString *)appIDForContext:(id)context
+{
+    NSDictionary *appInfo = [self appInfoForContext:context];
+    if (appInfo == nil) {
+        return nil;
+    }
     return [appInfo objectForKey:@"id"];
 }
 
