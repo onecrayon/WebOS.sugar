@@ -87,7 +87,7 @@
     NSURL *root = [self appRootFolderForContext:context];
     if (root == nil) {
         // We cannot find the appInfo.json file
-        return @"";
+        return nil;
     }
     // Grab the contents of the file and parse as JSON
     NSDictionary *appInfo = [[NSString stringWithContentsOfFile:[root path] encoding:NSUTF8StringEncoding error:NULL] JSONValue];
