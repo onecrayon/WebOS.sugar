@@ -28,6 +28,15 @@
 	return self;
 }
 
+# pragma Shared Espresso protocol calls
+
+- (BOOL)canPerformActionWithContext:(id)context
+{
+    return YES;
+}
+
+# pragma Shared utility methods
+
 - (NSURL *)projectURLForContext:(id)context
 {
     id doc = [[context windowForSheet] document];

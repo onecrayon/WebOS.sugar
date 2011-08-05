@@ -6,11 +6,13 @@
 //  Copyright 2011 One Crayon. All rights reserved.
 //
 
-
+#import <Foundation/Foundation.h>
 
 @interface WebOSGenericAction : NSObject {
     
 }
+
+- (BOOL)canPerformActionWithContext:(id)context;
 
 - (NSURL *)projectURLForContext:(id)context;
 - (NSURL *)sharedURLForContext:(id)context;
