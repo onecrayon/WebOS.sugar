@@ -141,4 +141,31 @@
 	return outString;
 }
 
+- (void)runCommandsInTerminal:(NSString *)commands hideCommands:(BOOL)hideFlag
+{
+    NSMutableString *scriptCommand = [commands mutableCopy];
+    // Escape our quotation marks (since it will be wrapped in quotation marks in Applescript)
+	[scriptCommand replaceOccurrencesOfString:@"\"" withString:@"\\\""];
+	
+	// Wrap shell command in Applescript
+	[scriptCommand insertString:@"tell application \"Terminal\"\nactivate\ndo script \"" atIndex:0];
+    if (hideFlag) {
+        // Add clearing code to the end to end up with a happy empty Terminal window
+        [scriptCommand appendString:@"  && echo $'\\\\ec'\""];
+    }
+	
+	// Check if Terminal is running
+	NSArray *termsOpen = [NSRunningApplication runningApplicationsWithBundleIdentifier:@"com.apple.Terminal"];
+	if ([termsOpen count] == 0) {
+		// Not running yet, so specify window to make sure we don't spawn an extra one
+		[scriptCommand appendString:@" in window 1"];
+	}
+	
+	[scriptCommand appendString:@"\nend tell"];
+	
+	NSAppleScript *appleScript = [[NSAppleScript alloc] initWithSource:scriptCommand];
+	[appleScript executeAndReturnError:nil];
+    [scriptCommand release];
+}
+
 @end

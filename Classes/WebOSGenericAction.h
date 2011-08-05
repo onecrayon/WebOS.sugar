@@ -19,5 +19,6 @@
 - (NSDictionary *)appInfoForContext:(id)context;
 - (NSString *)appIDForContext:(id)context;
 - (NSString *)runCommands:(NSString *)commands withEnv:(NSDictionary *)env;
+- (void)runCommandsInTerminal:(NSString *)commands hideCommands:(BOOL)hideFlag;
 
 @end

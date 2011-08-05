@@ -10,4 +10,6 @@
 
 @interface WebOSFollowAppLog : WebOSGenericAction
 
+- (BOOL)performActionWithContext:(id)context error:(NSError **)outError;
+
 @end
