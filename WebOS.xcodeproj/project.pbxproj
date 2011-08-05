@@ -26,6 +26,7 @@
 		7A2D616B13E0DBFB00EE958D /* FileActions in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7A2D616613E0DBF300EE958D /* FileActions */; };
 		7A2D616C13E0DBFB00EE958D /* TextActions in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7A2D616813E0DBF300EE958D /* TextActions */; };
 		7AB6CC7713ECB32300909E9A /* WebOSFollowAppLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AB6CC7613ECB32300909E9A /* WebOSFollowAppLog.m */; };
+		7AB6CC7B13ECB8C000909E9A /* WebOSCommandInTerminal.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AB6CC7A13ECB8C000909E9A /* WebOSCommandInTerminal.m */; };
 		7ACB84F413EC342F008C1617 /* WebOSLaunchEmulator.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ACB84F313EC342F008C1617 /* WebOSLaunchEmulator.m */; };
 		7ACB84FB13EC376B008C1617 /* WebOSCommandAppID.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ACB84FA13EC376B008C1617 /* WebOSCommandAppID.m */; };
 		7ACB850313EC3C5B008C1617 /* WebOSPackageAndInstall.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ACB850213EC3C5B008C1617 /* WebOSPackageAndInstall.m */; };
@@ -90,6 +91,8 @@
 		7A2D616813E0DBF300EE958D /* TextActions */ = {isa = PBXFileReference; lastKnownFileType = folder; name = TextActions; path = "XML Based/TextActions"; sourceTree = SOURCE_ROOT; };
 		7AB6CC7513ECB32300909E9A /* WebOSFollowAppLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WebOSFollowAppLog.h; path = Classes/WebOSFollowAppLog.h; sourceTree = SOURCE_ROOT; };
 		7AB6CC7613ECB32300909E9A /* WebOSFollowAppLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WebOSFollowAppLog.m; path = Classes/WebOSFollowAppLog.m; sourceTree = SOURCE_ROOT; };
+		7AB6CC7913ECB8C000909E9A /* WebOSCommandInTerminal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WebOSCommandInTerminal.h; path = Classes/WebOSCommandInTerminal.h; sourceTree = SOURCE_ROOT; };
+		7AB6CC7A13ECB8C000909E9A /* WebOSCommandInTerminal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WebOSCommandInTerminal.m; path = Classes/WebOSCommandInTerminal.m; sourceTree = SOURCE_ROOT; };
 		7ACB84F213EC342F008C1617 /* WebOSLaunchEmulator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WebOSLaunchEmulator.h; path = Classes/WebOSLaunchEmulator.h; sourceTree = SOURCE_ROOT; };
 		7ACB84F313EC342F008C1617 /* WebOSLaunchEmulator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WebOSLaunchEmulator.m; path = Classes/WebOSLaunchEmulator.m; sourceTree = SOURCE_ROOT; };
 		7ACB84F913EC376B008C1617 /* WebOSCommandAppID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WebOSCommandAppID.h; path = Classes/WebOSCommandAppID.h; sourceTree = SOURCE_ROOT; };
@@ -124,6 +127,8 @@
 				7ACB850213EC3C5B008C1617 /* WebOSPackageAndInstall.m */,
 				7AB6CC7513ECB32300909E9A /* WebOSFollowAppLog.h */,
 				7AB6CC7613ECB32300909E9A /* WebOSFollowAppLog.m */,
+				7AB6CC7913ECB8C000909E9A /* WebOSCommandInTerminal.h */,
+				7AB6CC7A13ECB8C000909E9A /* WebOSCommandInTerminal.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -309,6 +314,7 @@
 				7ACB84FB13EC376B008C1617 /* WebOSCommandAppID.m in Sources */,
 				7ACB850313EC3C5B008C1617 /* WebOSPackageAndInstall.m in Sources */,
 				7AB6CC7713ECB32300909E9A /* WebOSFollowAppLog.m in Sources */,
+				7AB6CC7B13ECB8C000909E9A /* WebOSCommandInTerminal.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
