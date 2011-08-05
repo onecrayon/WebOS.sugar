@@ -30,7 +30,7 @@
 {
     NSURL *root = [self appRootFolderForContext:context];
     if (root == nil) {
-        NSLog(@"WebOS.sugar: Unable to find appID for current project");
+        NSLog(@"WebOS.sugar: Unable to find appInfo.json for current project");
         return NO;
     }
     NSString *appID = [self appIDForContext:context];

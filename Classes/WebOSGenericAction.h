@@ -8,9 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface WebOSGenericAction : NSObject {
-    
-}
+@interface WebOSGenericAction : NSObject
 
 - (BOOL)canPerformActionWithContext:(id)context;
 
