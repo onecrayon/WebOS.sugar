@@ -13,29 +13,22 @@
 	</action>
 	
 	<action id="com.onecrayon.webos.file-actions.follow-log" category="actions.webos/webos.terminal-actions/0">
-		<class>Spice</class>
+		<class>WebOSFollowAppLog</class>
 		<key-equivalent>control t</key-equivalent>
-		<setup>
-			<script>terminal_log</script>
-		</setup>
 	</action>
 	
 	<action id="com.onecrayon.webos.file-actions.ssh-emulator" category="actions.webos/webos.terminal-actions/1">
-		<class>Spice</class>
+		<class>WebOSCommandInTerminal</class>
 		<key-equivalent>control shift s</key-equivalent>
 		<setup>
-			<script>terminal_command</script>
-			
 			<command>echo "Password is blank, just hit enter"; ssh -p 5522 -L 5581:localhost:8080 root@localhost</command>
 		</setup>
 	</action>
 	
 	<action id="com.onecrayon.webos.file-actions.novaterm" category="actions.webos/webos.terminal-actions/2">
-		<class>Spice</class>
+		<class>WebOSCommandInTerminal</class>
 		<key-equivalent>control shift n</key-equivalent>
 		<setup>
-			<script>terminal_command</script>
-			
 			<command>novaterm</command>
 		</setup>
 	</action>

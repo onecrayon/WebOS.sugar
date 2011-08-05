@@ -30,7 +30,7 @@
     }
     // Create our shell script to execute
 	NSString *command = [NSString stringWithFormat:@"palm-log -f %@", appID];
-	[self runCommandsInTerminal:command hideCommands:NO];
+	[self runCommandsInTerminal:command];
     
     return YES;
 }

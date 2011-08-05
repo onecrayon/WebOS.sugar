@@ -8,8 +8,11 @@
 
 #import "WebOSGenericAction.h"
 
-@interface WebOSCommandInTerminal : WebOSGenericAction
+@interface WebOSCommandInTerminal : WebOSGenericAction {
+    NSString *command;
+}
 
+- (id)initWithDictionary:(NSDictionary *)dictionary bundlePath:(NSString *)bundlePath;
 - (BOOL)performActionWithContext:(id)context error:(NSError **)outError;
 
 @end

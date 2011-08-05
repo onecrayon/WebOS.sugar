@@ -10,19 +10,28 @@
 
 @implementation WebOSCommandInTerminal
 
-- (id)init
+- (id)initWithDictionary:(NSDictionary *)dictionary bundlePath:(NSString *)bundlePath
 {
     self = [super init];
-    if (self) {
-        // Initialization code here.
-    }
+	if (self == nil)
+		return nil;
     
-    return self;
+    command = [[dictionary objectForKey:@"command"] retain];
+	
+	return self;   
+}
+
+- (void)dealloc
+{
+    MRRelease(command);
 }
 
 - (BOOL)performActionWithContext:(id)context error:(NSError **)outError
 {
+    // Execute our command
+	[self runCommandsInTerminal:command];
     
+    return YES;
 }
 
 @end
