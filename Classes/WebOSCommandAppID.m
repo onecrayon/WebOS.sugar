@@ -28,12 +28,15 @@
 
 - (BOOL)performActionWithContext:(id)context error:(NSError **)outError
 {
-    NSString *appID = [self appIDForContext:context];
-    if (appID == nil) {
+    NSURL *root = [self appRootFolderForContext:context];
+    if (root == nil) {
         NSLog(@"WebOS.sugar: Unable to find appID for current project");
         return NO;
     }
-    NSString *finalCommand = [NSString stringWithFormat:@"%@ %@", command, appID, nil];
+    NSString *appID = [self appIDForContext:context];
+    NSURL *sharedFolder = [root URLByDeletingLastPathComponent];
+    NSString *cdSharedFolder = [NSString stringWithFormat:@"cd \"%@\";", [sharedFolder path], nil];
+    NSString *finalCommand = [NSString stringWithFormat:@"%@ %@ %@", cdSharedFolder, command, appID, nil];
     NSLog([self runCommands:finalCommand withEnv:nil]);
     return YES;
 }
