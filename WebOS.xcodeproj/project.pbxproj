@@ -27,6 +27,8 @@
 		7A2D616C13E0DBFB00EE958D /* TextActions in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7A2D616813E0DBF300EE958D /* TextActions */; };
 		7ACB84F413EC342F008C1617 /* WebOSLaunchEmulator.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ACB84F313EC342F008C1617 /* WebOSLaunchEmulator.m */; };
 		7ACB84FB13EC376B008C1617 /* WebOSCommandAppID.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ACB84FA13EC376B008C1617 /* WebOSCommandAppID.m */; };
+		7ACB850313EC3C5B008C1617 /* WebOSPackageAndInstall.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ACB850213EC3C5B008C1617 /* WebOSPackageAndInstall.m */; };
+		7ACB850913EC405B008C1617 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7ACB850713EC405B008C1617 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -89,6 +91,9 @@
 		7ACB84F313EC342F008C1617 /* WebOSLaunchEmulator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WebOSLaunchEmulator.m; path = Classes/WebOSLaunchEmulator.m; sourceTree = SOURCE_ROOT; };
 		7ACB84F913EC376B008C1617 /* WebOSCommandAppID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WebOSCommandAppID.h; path = Classes/WebOSCommandAppID.h; sourceTree = SOURCE_ROOT; };
 		7ACB84FA13EC376B008C1617 /* WebOSCommandAppID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WebOSCommandAppID.m; path = Classes/WebOSCommandAppID.m; sourceTree = SOURCE_ROOT; };
+		7ACB850113EC3C5B008C1617 /* WebOSPackageAndInstall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WebOSPackageAndInstall.h; path = Classes/WebOSPackageAndInstall.h; sourceTree = SOURCE_ROOT; };
+		7ACB850213EC3C5B008C1617 /* WebOSPackageAndInstall.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WebOSPackageAndInstall.m; path = Classes/WebOSPackageAndInstall.m; sourceTree = SOURCE_ROOT; };
+		7ACB850813EC405B008C1617 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = "Supporting Files/en.lproj/Localizable.strings"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +117,8 @@
 				7ACB84F313EC342F008C1617 /* WebOSLaunchEmulator.m */,
 				7ACB84F913EC376B008C1617 /* WebOSCommandAppID.h */,
 				7ACB84FA13EC376B008C1617 /* WebOSCommandAppID.m */,
+				7ACB850113EC3C5B008C1617 /* WebOSPackageAndInstall.h */,
+				7ACB850213EC3C5B008C1617 /* WebOSPackageAndInstall.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -201,6 +208,7 @@
 			children = (
 				7A2D614413E0D7C600EE958D /* Info.plist */,
 				7A2D614813E0D7C600EE958D /* WebOS_Prefix.pch */,
+				7ACB850713EC405B008C1617 /* Localizable.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -268,6 +276,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7ACB850913EC405B008C1617 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,10 +302,22 @@
 				7A2978FA13EAE1D0004D5DC7 /* SBJsonWriter.m in Sources */,
 				7ACB84F413EC342F008C1617 /* WebOSLaunchEmulator.m in Sources */,
 				7ACB84FB13EC376B008C1617 /* WebOSCommandAppID.m in Sources */,
+				7ACB850313EC3C5B008C1617 /* WebOSPackageAndInstall.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		7ACB850713EC405B008C1617 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7ACB850813EC405B008C1617 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		7A2D614913E0D7C600EE958D /* Debug */ = {

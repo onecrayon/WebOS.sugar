@@ -1,0 +1,9 @@
+"com.onecrayon.webos.file-actions.launch-emulator.title" = "Launch Emulator";
+"com.onecrayon.webos.file-actions.launch-resource-monitor.title" = "Launch Resource Monitor";
+"com.onecrayon.webos.file-actions.follow-log.title" = "Follow Log in Terminal";
+"com.onecrayon.webos.file-actions.ssh-emulator.title" = "SSH Into Emulator";
+"com.onecrayon.webos.file-actions.novaterm.title" = "Novaterm Into Device";
+"com.onecrayon.webos.file-actions.package-install.title" = "Install and Run App";
+"com.onecrayon.webos.file-actions.run-app.title" = "Run App";
+"com.onecrayon.webos.file-actions.close-app.title" = "Close App";
+"com.onecrayon.webos.file-actions.delete-app.title" = "Delete App";

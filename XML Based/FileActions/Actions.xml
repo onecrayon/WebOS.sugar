@@ -1,38 +1,27 @@
 <?xml version="1.0"?>
 <action-recipes>
-	<action id="com.onecrayon.WebOS.LaunchEmulator" category="actions.webos/webos.emulator-actions/0">
-		<class>Spice</class>
-		<title>Launch Emulator</title>
+	<action id="com.onecrayon.webos.file-actions.launch-emulator" category="actions.webos/webos.emulator-actions/0">
+		<class>WebOSLaunchEmulator</class>
 		<key-equivalent>control shift m</key-equivalent>
-		<setup>
-			<script>exec_command</script>
-			
-			<command>osascript -e 'tell application "Palm Emulator" to quit'; open -a "Palm Emulator";</command>
-		</setup>
 	</action>
 	
-	<action id="com.onecrayon.WebOS.LaunchResourceMonitor" category="actions.webos/webos.emulator-actions/2">
-		<class>Spice</class>
-		<title>Launch Resource Monitor</title>
+	<action id="com.onecrayon.webos.file-actions.launch-resource-monitor" category="actions.webos/webos.emulator-actions/2">
+		<class>WebOSCommandAppID</class>
 		<setup>
-			<script>work_with_app</script>
-			
 			<command>palm-worm</command>
 		</setup>
 	</action>
 	
-	<action id="com.onecrayon.WebOS.FollowLog" category="actions.webos/webos.terminal-actions/0">
+	<action id="com.onecrayon.webos.file-actions.follow-log" category="actions.webos/webos.terminal-actions/0">
 		<class>Spice</class>
-		<title>View Log in Terminal</title>
 		<key-equivalent>control t</key-equivalent>
 		<setup>
 			<script>terminal_log</script>
 		</setup>
 	</action>
 	
-	<action id="com.onecrayon.WebOS.SSHEmulator" category="actions.webos/webos.terminal-actions/1">
+	<action id="com.onecrayon.webos.file-actions.ssh-emulator" category="actions.webos/webos.terminal-actions/1">
 		<class>Spice</class>
-		<title>SSH Into Emulator</title>
 		<key-equivalent>control shift s</key-equivalent>
 		<setup>
 			<script>terminal_command</script>
@@ -41,9 +30,8 @@
 		</setup>
 	</action>
 	
-	<action id="com.onecrayon.WebOS.Novaterm" category="actions.webos/webos.terminal-actions/2">
+	<action id="com.onecrayon.webos.file-actions.novaterm" category="actions.webos/webos.terminal-actions/2">
 		<class>Spice</class>
-		<title>Novaterm Into Device</title>
 		<key-equivalent>control shift n</key-equivalent>
 		<setup>
 			<script>terminal_command</script>
@@ -52,44 +40,34 @@
 		</setup>
 	</action>
 	
-	<action id="com.onecrayon.WebOS.PackageInstall" category="actions.webos/webos.app-actions/0">
+	<action id="com.onecrayon.webos.file-actions.package-install" category="actions.webos/webos.app-actions/0">
 		<class>Spice</class>
-		<title>Install and Run App</title>
 		<key-equivalent>control r</key-equivalent>
 		<setup>
 			<script>package_install</script>
 		</setup>
 	</action>
 	
-	<action id="com.onecrayon.WebOS.RunApp" category="actions.webos/webos.app-actions/1">
-		<class>Spice</class>
-		<title>Run App</title>
+	<action id="com.onecrayon.webos.file-actions.run-app" category="actions.webos/webos.app-actions/1">
+		<class>WebOSCommandAppID</class>
 		<key-equivalent>control shift r</key-equivalent>
 		<setup>
-			<script>work_with_app</script>
-			
 			<command>palm-launch -i</command>
 		</setup>
 	</action>
 	
-	<action id="com.onecrayon.WebOS.CloseApp" category="actions.webos/webos.app-actions/2">
-		<class>Spice</class>
-		<title>Close App</title>
+	<action id="com.onecrayon.webos.file-actions.close-app" category="actions.webos/webos.app-actions/2">
+		<class>WebOSCommandAppID</class>
 		<key-equivalent>control x</key-equivalent>
 		<setup>
-			<script>work_with_app</script>
-			
 			<command>palm-launch -c</command>
 		</setup>
 	</action>
 	
-	<action id="com.onecrayon.WebOS.DeleteApp" category="actions.webos/webos.app-actions/3">
-		<class>Spice</class>
-		<title>Delete App</title>
+	<action id="com.onecrayon.webos.file-actions.delete-app" category="actions.webos/webos.app-actions/3">
+		<class>WebOSCommandAppID</class>
 		<key-equivalent>command control shift x</key-equivalent>
 		<setup>
-			<script>work_with_app</script>
-			
 			<command>palm-install -r</command>
 		</setup>
 	</action>
