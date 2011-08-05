@@ -22,7 +22,7 @@
 
 - (BOOL)performActionWithContext:(id)context error:(NSError **)outError
 {
-    
+    return [[NSWorkspace sharedWorkspace] launchApplication:@"Palm Emulator"];
 }
 
 @end
