@@ -20,6 +20,11 @@
     return self;
 }
 
+- (BOOL)canPerformActionWithContext:(id)context
+{
+    return YES;
+}
+
 - (BOOL)performActionWithContext:(id)context error:(NSError **)outError
 {
     return [[NSWorkspace sharedWorkspace] launchApplication:@"Palm Emulator"];
