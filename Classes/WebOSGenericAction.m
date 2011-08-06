@@ -8,6 +8,7 @@
 
 #import "WebOSGenericAction.h"
 #import "SBJson.h"
+#import <NSString+MRFoundation.h>
 
 // HACK: these are not exposed in the public Espresso API, but we need them to properly locate shared and project directories
 // DON'T TRY THIS AT HOME! YOUR SUGAR WILL LIKELY BREAK WITH FUTURE ESPRESSO UPDATES
