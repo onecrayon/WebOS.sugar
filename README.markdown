@@ -26,52 +26,15 @@ so other people can benefit and contribute to it, as well.
 Once Espresso 2.0 is installed, [download the WebOS.sugar][dl],
 unzip it, and double click to install.
 
-If you have git installed, instead run this command then relaunch
-Espresso:
-
-    cd ~/Library/Application\ Support/Espresso/Sugars
-    git clone git://github.com/onecrayon/WebOS.sugar.git
-
    [e2]: http://macrabbit.com/espresso/2/
    [dl]: http://onecrayon.com/downloads/WebOS.sugar.zip
 
-## File Actions
+## Documentation
 
-Most of the actions you'll want to use are located in
-File&rarr;Actions&rarr;WebOS. They are also accessible by
-right clicking a folder or file in your project
-or using the gear menu next to FILES.
+For documentation and release notes, visit the
+WebOS.sugar webpage:
 
-**Launch Emulator** will do what it says
-on the tin (assuming you've installed the SDK), or will
-quit and then relaunch the program (if it's already running).
-
-**Launch Resource Manager** will run palm-worm for your app.
-It will not relaunch it, so you'll have to close it down yourself.
-
-**View Log In Terminal** will open up a new Terminal window
-and follow your app's debugging log.
-
-**SSH Into Emulator** will open up an SSH session to the emulator
-in Terminal.
-
-**Novaterm Into Device** will launch Novaterm in Terminal.
-
-**Install and Run App** will package, install, and launch your
-app in the first device it finds. This is probably the action
-you will use the most, because it gives you very quick access
-to your most recent changes. Note that you _do not_ need to
-manually quit the app before running this action; both Emulator and
-device are smart enough to quit the app before installing and
-relaunching it.
-
-**Run App** simply runs the app. You probably won't need
-this much, since usually you'll have made changes you want to see.
-
-**Close App** and **Delete App** do what they claim they will.
-Deleting the app will remove any app-specific data, so if you need
-to start from scratch as a first-run, use Delete and then Install
-And Run.
+<http://onecrayon.com/products/webos-sugar/>
 
 ## Comments and requests
 
