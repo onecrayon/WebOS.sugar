@@ -87,9 +87,10 @@
 {
     NSURL *root = [self appRootFolderForContext:context];
     if (root == nil) {
-        // We cannot find the appInfo.json file
+        // We cannot find the appinfo.json file
         return nil;
     }
+    root = [root URLByAppendingPathComponent:@"appinfo.json"];
     // Grab the contents of the file and parse as JSON
     return [[NSString stringWithContentsOfFile:[root path] encoding:NSUTF8StringEncoding error:NULL] JSONValue];
 }
@@ -126,7 +127,7 @@
     // Setup environment
     NSMutableDictionary *environment = [NSMutableDictionary dictionaryWithDictionary:env];
     // We always have to add our SDK binaries to the path, so do that
-    [environment setObject:@"/opt/PalmSDK/Current/bin/:$PATH" forKey:@"PATH"];
+    [environment setObject:@"/opt/PalmSDK/Current/bin/:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin" forKey:@"PATH"];
     [task setEnvironment:environment];
 	
 	[task launch];

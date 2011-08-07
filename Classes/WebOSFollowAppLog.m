@@ -25,7 +25,7 @@
     // Grab our appID
     NSString *appID = [self appIDForContext:context];
     if (appID == nil) {
-        NSLog(@"WebOS.sugar: Unable to find appInfo.json for current project");
+        NSLog(@"WebOS.sugar: Unable to find appinfo.json for current project");
         return NO;
     }
     // Create our shell script to execute

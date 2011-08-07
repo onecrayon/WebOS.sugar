@@ -22,10 +22,10 @@
 
 - (BOOL)performActionWithContext:(id)context error:(NSError **)outError
 {
-    // We need two things to construct our package command: the appInfo.json folder name and path to the parent folder
+    // We need two things to construct our package command: the appinfo.json folder name and path to the parent folder
     NSURL *projectFolder = [self appRootFolderForContext:context];
     if (projectFolder == nil) {
-        NSLog(@"WebOS.sugar: Unable to find appInfo.json for current project");
+        NSLog(@"WebOS.sugar: Unable to find appinfo.json for current project");
         return NO;
     }
     NSString *projectName = [projectFolder lastPathComponent];
