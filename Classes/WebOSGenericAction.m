@@ -166,6 +166,7 @@
 	NSAppleScript *appleScript = [[NSAppleScript alloc] initWithSource:scriptCommand];
 	[appleScript executeAndReturnError:nil];
     [scriptCommand release];
+    [appleScript release];
 }
 
 @end
