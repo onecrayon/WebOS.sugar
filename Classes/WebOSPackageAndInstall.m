@@ -32,7 +32,7 @@
     NSString *sharedFolder = [[projectFolder URLByDeletingLastPathComponent] path];
     // Grab the appID so we can launch it afterward
     NSDictionary *appInfo = [self appInfoForContext:context];
-    NSString *packageCommand = [NSString stringWithFormat:@"cd %@; palm-package --exclude=\"*.esproj\" %@", sharedFolder, projectName, nil];
+    NSString *packageCommand = [NSString stringWithFormat:@"cd \"%@\"; palm-package --exclude=\"*.esproj\" \"%@\"", sharedFolder, projectName, nil];
 	// Run the package command
     NSString *result = [self runCommands:packageCommand withEnv:nil];
 	// Check to make sure the result is what we want
@@ -45,10 +45,10 @@
 	NSLog(@"%@", result);
 	// Made it here, so construct the name of the IPK file and install it
     NSString *ipkFile = [NSString stringWithFormat:@"%@_%@_all.ipk", [appInfo objectForKey:@"id"], [appInfo objectForKey:@"version"], nil];
-    NSString *installCommand = [NSString stringWithFormat:@"cd \"%@\"; palm-install %@", sharedFolder, ipkFile, nil];
+    NSString *installCommand = [NSString stringWithFormat:@"cd \"%@\"; palm-install \"%@\"", sharedFolder, ipkFile, nil];
     NSLog(@"%@", [self runCommands:installCommand withEnv:nil]);
     // Launch the app
-    NSString *launchCommand = [NSString stringWithFormat:@"palm-launch %@", [appInfo objectForKey:@"id"], nil];
+    NSString *launchCommand = [NSString stringWithFormat:@"palm-launch \"%@\"", [appInfo objectForKey:@"id"], nil];
     NSLog(@"%@", [self runCommands:launchCommand withEnv:nil]);
     return YES;
 }

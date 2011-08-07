@@ -151,6 +151,8 @@
 	
 	// Wrap shell command in Applescript
 	[scriptCommand insertString:@"tell application \"Terminal\"\nactivate\ndo script \"" atIndex:0];
+    // Close our script quotation
+	[scriptCommand appendString:@"\""];
 	
 	// Check if Terminal is running
 	NSArray *termsOpen = [NSRunningApplication runningApplicationsWithBundleIdentifier:@"com.apple.Terminal"];

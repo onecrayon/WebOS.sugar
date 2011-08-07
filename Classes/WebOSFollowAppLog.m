@@ -29,7 +29,7 @@
         return NO;
     }
     // Create our shell script to execute
-	NSString *command = [NSString stringWithFormat:@"palm-log -f %@", appID];
+	NSString *command = [NSString stringWithFormat:@"palm-log -f \"%@\"", appID];
 	[self runCommandsInTerminal:command];
     
     return YES;
