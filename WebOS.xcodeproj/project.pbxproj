@@ -336,6 +336,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				APPLICATION_PATH = /Applications/Espresso.app;
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -352,7 +353,8 @@
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				HEADER_SEARCH_PATHS = "$(APPLICATION_PATH)/Contents/Headers";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
 			};
@@ -362,7 +364,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				APPLICATION_PATH = /Applications/Espresso.app;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -372,23 +375,19 @@
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(APPLICATION_PATH)/Contents/Headers";
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
-				SDKROOT = macosx;
+				SDKROOT = macosx10.6;
 			};
 			name = Release;
 		};
 		7A2D614C13E0D7C600EE958D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				APPLICATION_PATH = /Applications/Espresso.app;
-				BUNDLE_LOADER = "$(APPLICATION_PATH)/Contents/MacOS/Espresso";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Supporting Files/WebOS_Prefix.pch";
-				HEADER_SEARCH_PATHS = "$(APPLICATION_PATH)/Contents/Headers";
 				INFOPLIST_FILE = "Supporting Files/Info.plist";
-				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx10.6;
 				WRAPPER_EXTENSION = sugar;
 			};
 			name = Debug;
@@ -396,15 +395,10 @@
 		7A2D614D13E0D7C600EE958D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				APPLICATION_PATH = /Applications/Espresso.app;
-				BUNDLE_LOADER = "$(APPLICATION_PATH)/Contents/MacOS/Espresso";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Supporting Files/WebOS_Prefix.pch";
-				HEADER_SEARCH_PATHS = "$(APPLICATION_PATH)/Contents/Headers";
 				INFOPLIST_FILE = "Supporting Files/Info.plist";
-				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx10.6;
 				WRAPPER_EXTENSION = sugar;
 			};
 			name = Release;
